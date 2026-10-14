@@ -1,0 +1,5046 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+      window.scrollTo(0, 0);
+      window.addEventListener("beforeunload", function () {
+        window.scrollTo(0, 0);
+      });
+    </script>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>BigCatTrail | Follow the Wild - Rajasthan Safari Booking</title>
+    <meta
+      name="description"
+      content="Book jeep and canter tiger safaris in Ranthambore, Sariska, Mukundra Hills and more national parks in Rajasthan."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Mulish:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --g: #0f2e22;
+        --g2: #0a1f17;
+        --g3: #1b4a37;
+        --o: #f28c1e;
+        --w: #fbfaf6;
+        --ink: #14231c;
+        --mut: #5d6b64;
+        --bg: var(--w);
+        --fg: var(--ink);
+        --card: #fff;
+        --line: #e3e6df;
+        --r: 22px;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        box-sizing: border-box;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #0c1914;
+          --fg: #eef2ec;
+          --card: #12251d;
+          --line: #223a30;
+          --mut: #9fb0a6;
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #0c1914;
+        --fg: #eef2ec;
+        --card: #12251d;
+        --line: #223a30;
+        --mut: #9fb0a6;
+      }
+      html {
+        scroll-padding-top: 90px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        background: var(--bg);
+        color: var(--fg);
+        font:
+          400 17px/1.6 "Figtree",
+          system-ui,
+          sans-serif;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Marcellus", "Figtree", sans-serif;
+        line-height: 1.02;
+        letter-spacing: -0.02em;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      :focus-visible {
+        outline: 3px solid var(--o);
+        outline-offset: 3px;
+      }
+      .lenis {
+        height: auto;
+      }
+      .lenis.lenis-smooth {
+        scroll-behavior: auto !important;
+      }
+      section {
+        padding: clamp(70px, 10vw, 140px) clamp(20px, 5vw, 72px);
+      }
+      .wrap {
+        max-width: 1200px;
+        margin: auto;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5em;
+        background: var(--o);
+        color: #1a1205;
+        font-weight: 700;
+        padding: 0.85em 1.5em;
+        border-radius: 99px;
+        border: 0;
+        cursor: pointer;
+        font-size: 1rem;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px -8px var(--o);
+      }
+      .btn.ghost {
+        background: transparent;
+        color: #fff;
+        border: 1.5px solid rgba(255, 255, 255, 0.4);
+      }
+      .paw {
+        width: 1em;
+        height: 1em;
+        fill: currentColor;
+      }
+      /* preloader */
+      #pre {
+        position: fixed;
+        inset: 0;
+        z-index: 10000;
+        display: grid;
+        place-items: center;
+        background: transparent;
+      }
+      #pre .bars {
+        position: absolute;
+        inset: 0;
+        display: flex;
+      }
+      #pre .bars i {
+        flex: 1;
+        background: #fff;
+        transform-origin: top;
+      }
+      #pre .bars.pb2 {
+        z-index: -1;
+      }
+      #pre .bars.pb2 i {
+        background: var(--o);
+      }
+      #pre .in {
+        position: relative;
+        text-align: center;
+        color: var(--g);
+      }
+      #pre .trail {
+        display: flex;
+        gap: 18px;
+        justify-content: center;
+        margin-bottom: 22px;
+        font-size: 30px;
+        color: var(--g);
+      }
+      #pre .trail svg {
+        opacity: 0;
+        transform: rotate(18deg);
+      }
+      #pre .trail svg:nth-child(even) {
+        margin-top: 22px;
+        transform: rotate(-8deg);
+      }
+      #pre b {
+        font:
+          400 3.4rem "Marcellus",
+          sans-serif;
+        display: block;
+      }
+      #pre small {
+        letter-spacing: 0.3em;
+        font-size: 0.75rem;
+        color: var(--mut);
+      }
+      /* header */
+      header {
+        position: fixed;
+        top: calc(14px + env(safe-area-inset-top, 0px));
+        left: 0;
+        right: 0;
+        z-index: 50;
+        display: flex;
+        justify-content: center;
+        padding: 0 14px;
+      }
+      .bar {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        background: #fff;
+        border-radius: 99px;
+        padding: 8px 10px 8px 22px;
+        box-shadow: 0 12px 40px -14px rgba(0, 0, 0, 0.35);
+        width: min(1100px, 100%);
+        justify-content: space-between;
+        color: var(--ink);
+      }
+      .bar img {
+        height: 34px;
+        width: auto;
+        display: block;
+      }
+      nav {
+        display: flex;
+        gap: 26px;
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
+      nav a {
+        position: relative;
+      }
+      nav a:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -3px;
+        height: 2px;
+        background: var(--o);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s;
+      }
+      nav a:hover:after {
+        transform: scaleX(1);
+      }
+      .bar .btn {
+        padding: 0.65em 1.3em;
+      }
+      @media (max-width: 820px) {
+        nav {
+          display: none;
+        }
+        .bar {
+          gap: 10px;
+        }
+      }
+      /* hero */
+      #hero {
+        min-height: 100svh;
+        background: radial-gradient(
+          120% 90% at 70% 40%,
+          var(--g3),
+          var(--g) 45%,
+          var(--g2)
+        );
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        padding-top: 120px;
+      }
+      .stripes {
+        position: absolute;
+        inset: -10% -5%;
+        width: 110%;
+        height: 120%;
+        pointer-events: none;
+      }
+      .stripes path {
+        fill: #07140e;
+        opacity: 0.55;
+      }
+      .hero-in {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+      }
+      .kick {
+        display: inline-flex;
+        gap: 0.6em;
+        align-items: center;
+        font-weight: 500;
+        color: #ffd7a3;
+        margin-bottom: 22px;
+        font-size: 0.95rem;
+      }
+      h1 {
+        font-size: clamp(3.4rem, 11.5vw, 10.5rem);
+        font-weight: 800;
+      }
+      h1 .ln {
+        display: block;
+        overflow: hidden;
+        padding-bottom: 0.08em;
+      }
+      h1 .ln span {
+        display: block;
+      }
+      h1 .or {
+        color: var(--o);
+      }
+      .hero-p {
+        max-width: 46ch;
+        color: #cfe0d6;
+        margin: 26px 0 34px;
+        font-size: 1.12rem;
+      }
+      .cta {
+        display: flex !important;
+        gap: 16px !important;
+        justify-content: center !important;
+        margin-top: 6px !important;
+        margin-bottom: 26px !important;
+        position: relative !important;
+        z-index: 10 !important;
+      }
+      .eyes {
+        position: absolute;
+        right: clamp(10px, 7vw, 110px);
+        top: 50%;
+        width: clamp(200px, 34vw, 470px);
+        transform: translateY(-62%);
+        z-index: 1;
+      }
+      .eyes .lid {
+        transform-origin: center;
+        transform-box: fill-box;
+      }
+      .scroll {
+        position: absolute;
+        left: 50%;
+        bottom: 22px;
+        z-index: 2;
+        color: #9db5a8;
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        transform: translateX(-50%);
+      }
+      .scroll i {
+        width: 1.5px;
+        height: 38px;
+        background: linear-gradient(var(--o), transparent);
+        animation: dr 1.8s infinite;
+      }
+      @keyframes dr {
+        0% {
+          transform: scaleY(0);
+          transform-origin: top;
+        }
+        50% {
+          transform: scaleY(1);
+          transform-origin: top;
+        }
+        51% {
+          transform-origin: bottom;
+        }
+        100% {
+          transform: scaleY(0);
+          transform-origin: bottom;
+        }
+      }
+      @media (max-width: 700px) {
+        .eyes {
+          top: 96px;
+          transform: none;
+          opacity: 0.7;
+          width: 210px;
+        }
+        h1 {
+          margin-top: 60px;
+        }
+      }
+      /* about */
+      .about h2 {
+        font-size: clamp(2rem, 4.6vw, 4.2rem);
+        max-width: 20ch;
+        margin-bottom: 60px;
+      }
+      #sc span {
+        opacity: 0.18;
+      }
+      .about .row {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 60px;
+        align-items: start;
+      }
+      .about p {
+        color: var(--mut);
+        max-width: 58ch;
+      }
+      .about p + p {
+        margin-top: 16px;
+      }
+      .stats {
+        display: grid;
+        gap: 0;
+      }
+      .stat {
+        display: flex;
+        align-items: baseline;
+        gap: 16px;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .stat b {
+        font: 400 3.6rem/1 "Marcellus";
+        color: var(--o);
+        min-width: 2.2ch;
+      }
+      .stat span {
+        color: var(--mut);
+      }
+      @media (max-width: 820px) {
+        .about .row {
+          grid-template-columns: 1fr;
+          gap: 34px;
+        }
+      }
+      /* services */
+      #services {
+        background: #f4f2eb !important;
+        color: #14231c !important;
+      }
+      .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+      }
+      .head h2 {
+        font-size: clamp(2rem, 4.6vw, 4rem);
+        max-width: 16ch;
+      }
+      .head p {
+        max-width: 40ch;
+        color: var(--mut);
+      }
+      #services .head p {
+        color: #a9c0b4;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: var(--r);
+        padding: 30px 28px 34px;
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        transition:
+          background 0.3s,
+          border-color 0.3s;
+      }
+      .card:hover {
+        background: rgba(242, 140, 30, 0.12);
+        border-color: var(--o);
+      }
+      .card svg {
+        width: 38px;
+        height: 38px;
+        stroke: var(--o);
+        fill: none;
+        stroke-width: 1.6;
+        margin-bottom: auto;
+        padding-bottom: 30px;
+        box-sizing: content-box;
+      }
+      .card h3 {
+        font-size: 1.55rem;
+        margin-bottom: 8px;
+      }
+      .card p {
+        color: #a9c0b4;
+        font-size: 0.97rem;
+      }
+      @media (max-width: 900px) {
+        .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 560px) {
+        .kick {
+          opacity: 0 !important;
+        }
+        .wrap {
+          margin: auto 30px !important;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      /* parks */
+      .tools {
+        display: flex;
+        gap: 10px;
+      }
+      .tools button {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 1.5px solid var(--line);
+        background: var(--card);
+        color: var(--fg);
+        cursor: pointer;
+        font-size: 1.3rem;
+        transition: 0.25s;
+      }
+      .tools button:hover {
+        background: var(--o);
+        border-color: var(--o);
+        color: #1a1205;
+      }
+      #track {
+        display: flex;
+        gap: 18px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        padding: 4px clamp(20px, 5vw, 72px) 10px;
+        margin: 0 calc(-1 * clamp(20px, 5vw, 72px));
+        cursor: grab;
+      }
+      #track::-webkit-scrollbar {
+        display: none;
+      }
+      #track.drag {
+        cursor: grabbing;
+        scroll-snap-type: none;
+      }
+      .park {
+        flex: 0 0 min(340px, 78vw);
+        height: 460px;
+        border-radius: 26px;
+        scroll-snap-align: start;
+        position: relative;
+        overflow: hidden;
+        color: #fff;
+        padding: 26px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        isolation: isolate;
+        user-select: none;
+      }
+      .park:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: var(--bgc);
+      }
+      .park:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: repeating-linear-gradient(
+          104deg,
+          transparent 0 26px,
+          rgba(0, 0, 0, 0.18) 26px 34px,
+          transparent 34px 70px,
+          rgba(0, 0, 0, 0.1) 70px 74px
+        );
+        transition: transform 0.8s;
+      }
+      .park:hover:after {
+        transform: translateX(-30px);
+      }
+      .park .tag {
+        position: absolute;
+        top: 22px;
+        left: 22px;
+        background: rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(8px);
+        padding: 0.3em 0.9em;
+        border-radius: 99px;
+        font-size: 0.82rem;
+      }
+      .park .big {
+        position: absolute;
+        top: 60px;
+        right: -14px;
+        font: 400 7rem/1 "Marcellus";
+        opacity: 0.14;
+      }
+      .park h3 {
+        font-size: 2rem;
+        margin-bottom: 6px;
+      }
+      .park p {
+        font-size: 0.95rem;
+        opacity: 0.92;
+      }
+      .prog {
+        height: 3px;
+        background: var(--line);
+        margin-top: 26px;
+        border-radius: 3px;
+        overflow: hidden;
+      }
+      .prog i {
+        display: block;
+        height: 100%;
+        width: 20%;
+        background: var(--o);
+        transform-origin: left;
+      }
+      /* form */
+      #book {
+        background: var(--card);
+      }
+      .bk {
+        display: grid;
+        grid-template-columns: 1fr 1.15fr;
+        gap: 60px;
+      }
+      .bk h2 {
+        font-size: clamp(2.2rem, 5vw, 4.4rem);
+        margin-bottom: 20px;
+      }
+      .bk > div > p {
+        color: var(--mut);
+        max-width: 40ch;
+      }
+      .bk ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 28px;
+        display: grid;
+        gap: 12px;
+      }
+      .bk li {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .bk li svg {
+        color: var(--o);
+      }
+      form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        background: var(--bg);
+        padding: clamp(22px, 3vw, 38px);
+        border-radius: 28px;
+        border: 1px solid var(--line);
+      }
+      label {
+        display: grid;
+        gap: 6px;
+        font-size: 0.88rem;
+        font-weight: 500;
+      }
+      label.full {
+        grid-column: 1/-1;
+      }
+      input,
+      select,
+      textarea {
+        font: inherit;
+        padding: 0.85em 1em;
+        border-radius: 14px;
+        border: 1.5px solid var(--line);
+        background: var(--card);
+        color: var(--fg);
+        width: 100%;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: 0;
+        border-color: var(--o);
+        box-shadow: 0 0 0 4px rgba(242, 140, 30, 0.2);
+      }
+      textarea {
+        min-height: 100px;
+        resize: vertical;
+      }
+      form .btn {
+        grid-column: 1/-1;
+        justify-content: center;
+        padding: 1em;
+      }
+      #ok {
+        grid-column: 1/-1;
+        color: var(--g3);
+        font-weight: 500;
+        min-height: 1.4em;
+      }
+      @media (max-width: 860px) {
+        .bk {
+          grid-template-columns: 1fr;
+          gap: 34px;
+        }
+        form {
+          grid-template-columns: 1fr;
+        }
+      }
+      /* faq */
+      .faq {
+        max-width: 860px;
+        margin: auto;
+      }
+      .faq h2 {
+        font-size: clamp(2rem, 4.6vw, 3.8rem);
+        margin-bottom: 40px;
+      }
+      .q {
+        border-bottom: 1px solid var(--line);
+      }
+      .q button {
+        all: unset;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 24px 0;
+        cursor: pointer;
+        font: 400 1.2rem "Marcellus";
+      }
+      .q button:focus-visible {
+        outline: 3px solid var(--o);
+      }
+      .q i {
+        flex: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1.5px solid var(--line);
+        position: relative;
+        transition: 0.3s;
+      }
+      .q i:before,
+      .q i:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 12px;
+        height: 1.5px;
+        background: currentColor;
+        transform: translate(-50%, -50%);
+      }
+      .q i:after {
+        transform: translate(-50%, -50%) rotate(90deg);
+        transition: 0.3s;
+      }
+      .q.open i {
+        background: var(--o);
+        border-color: var(--o);
+        color: #1a1205;
+      }
+      .q.open i:after {
+        transform: translate(-50%, -50%) rotate(0);
+      }
+      .q div {
+        height: 0;
+        overflow: hidden;
+      }
+      .q div p {
+        padding: 0 50px 24px 0;
+        color: var(--mut);
+      }
+      /* footer */
+      footer {
+        background: var(--g2);
+        color: #a9c0b4;
+        padding: 34px clamp(20px, 5vw, 72px)
+          calc(34px + env(safe-area-inset-bottom, 0px));
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+        align-items: center;
+      }
+      footer b {
+        font: 400 1.2rem "Marcellus";
+        color: #fff;
+      }
+      footer b em {
+        color: var(--o);
+        font-style: normal;
+      }
+      footer nav {
+        gap: 20px;
+      }
+      .wa {
+        position: fixed;
+        right: 18px;
+        bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+        z-index: 60;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #25d366;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 10px 30px -6px rgba(37, 211, 102, 0.7);
+      }
+      .wa:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 2px solid #25d366;
+        animation: pg 2.2s infinite;
+      }
+      @keyframes pg {
+        to {
+          transform: scale(1.6);
+          opacity: 0;
+        }
+      }
+      .wa svg {
+        width: 32px;
+        height: 32px;
+        fill: #fff;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+
+      :root {
+        --g: #0a8f4d;
+        --g2: #04371f;
+        --g3: #14c46c;
+        --o: #f5a30f;
+        --yg: linear-gradient(135deg, #ffe45c, #ffb300 48%, #f2610f);
+      }
+      #sp {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background: var(--yg);
+        transform: scaleX(0);
+        transform-origin: left;
+        z-index: 120;
+      }
+      .btn {
+        background: var(--yg);
+        isolation: isolate;
+        overflow: hidden;
+        position: relative;
+        transition:
+          color 0.35s,
+          box-shadow 0.35s;
+      }
+      .btn:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: #0b2a1b;
+        transform: translateY(102%);
+        transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+        z-index: -1;
+      }
+      .btn:hover {
+        transform: none;
+        color: #fff;
+        box-shadow: 0 14px 30px -8px rgba(255, 170, 0, 0.65);
+      }
+      .btn:hover:before {
+        transform: none;
+      }
+      .btn:active {
+        scale: 0.95;
+      }
+      .btn.ghost {
+        background: transparent;
+        color: #fff;
+      }
+      .btn.ghost:before {
+        background: var(--yg);
+      }
+      .btn.ghost:hover {
+        color: #1a1205;
+      }
+      header {
+        top: 0;
+        padding: 0;
+        transition:
+          top 0.5s,
+          padding 0.5s;
+      }
+      .bar {
+        width: 100%;
+        max-width: 2400px;
+        border-radius: 0;
+        padding: 16px clamp(20px, 5vw, 72px);
+        color: #fff;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.26),
+          rgba(255, 255, 255, 0.06)
+        );
+        -webkit-backdrop-filter: blur(14px) saturate(1.5);
+        backdrop-filter: blur(14px) saturate(1.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.55),
+          0 18px 30px -16px rgba(0, 0, 0, 0.5);
+        transition:
+          max-width 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+          border-radius 0.5s,
+          padding 0.5s,
+          background 0.4s,
+          color 0.4s,
+          box-shadow 0.5s;
+      }
+      header.sc {
+        top: calc(12px + env(safe-area-inset-top, 0px));
+        padding: 0 14px;
+      }
+      header.sc .bar {
+        max-width: 1100px;
+        border-radius: 99px;
+        padding: 8px 10px 8px 22px;
+        color: var(--ink);
+        background: #fff;
+        border-bottom: 0;
+        box-shadow: 0 12px 40px -14px rgba(0, 0, 0, 0.4);
+      }
+      .lg-t {
+        display: flex;
+        align-items: center;
+        gap: 0.4em;
+        font:
+          400 1.55rem "Marcellus",
+          sans-serif;
+        letter-spacing: -0.02em;
+      }
+      .lg-t em {
+        font-style: normal;
+        background: var(--yg);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .lg-t svg {
+        width: 26px;
+        height: 26px;
+        color: #e8892a;
+      }
+      .lg-i {
+        display: none;
+      }
+      header.sc .lg-i {
+        display: block;
+      }
+      header.sc .lg-t {
+        display: none;
+      }
+
+      .stripes path {
+        fill: #03261a;
+        opacity: 0.4;
+      }
+      h1 .or {
+        background: var(--yg);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .mq {
+        position: absolute;
+        left: -3%;
+        right: -3%;
+        bottom: 34px;
+        z-index: 2;
+        background: var(--yg);
+        color: #1a1205;
+        transform: rotate(-1.6deg);
+        overflow: hidden;
+        white-space: nowrap;
+        font: 400 1.15rem "Marcellus";
+        padding: 12px 0;
+        box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.5);
+      }
+      .mq div {
+        display: inline-flex;
+        gap: 28px;
+        align-items: center;
+        animation: mq 30s linear infinite;
+        padding-right: 28px;
+      }
+      .mq svg {
+        width: 1em;
+        height: 1em;
+      }
+      @keyframes mq {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      #services {
+        background: #f4f2eb !important;
+      }
+
+      .bento .bc.b1 {
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(5, 15, 10, 0.1) 0%,
+            rgba(5, 15, 10, 0.6) 45%,
+            rgba(4, 12, 8, 0.95) 100%
+          ),
+          url("https://i.pinimg.com/736x/f9/d0/42/f9d042ab24c6dd1a87881d0b8d78e18f.jpg") !important;
+        background-size: cover !important;
+        background-position: center !important;
+      }
+      .bento .bc.b2 {
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(5, 15, 10, 0.1) 0%,
+            rgba(5, 15, 10, 0.6) 45%,
+            rgba(4, 12, 8, 0.95) 100%
+          ),
+          url("https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=900&q=80") !important;
+        background-size: cover !important;
+        background-position: center !important;
+      }
+      .bento .bc.b3 {
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(5, 15, 10, 0.1) 0%,
+            rgba(5, 15, 10, 0.6) 45%,
+            rgba(4, 12, 8, 0.95) 100%
+          ),
+          url("https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=900&q=80") !important;
+        background-size: cover !important;
+        background-position: center !important;
+      }
+      .bento .bc.b4 {
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(5, 15, 10, 0.1) 0%,
+            rgba(5, 15, 10, 0.6) 45%,
+            rgba(4, 12, 8, 0.95) 100%
+          ),
+          url("https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=900&q=80") !important;
+        background-size: cover !important;
+        background-position: center !important;
+      }
+      .bento .bc.b5 {
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(5, 15, 10, 0.1) 0%,
+            rgba(5, 15, 10, 0.6) 45%,
+            rgba(4, 12, 8, 0.95) 100%
+          ),
+          url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80") !important;
+        background-size: cover !important;
+        background-position: center !important;
+      }
+      .bento .bc.b6 {
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(5, 15, 10, 0.1) 0%,
+            rgba(5, 15, 10, 0.6) 45%,
+            rgba(4, 12, 8, 0.95) 100%
+          ),
+          url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80") !important;
+        background-size: cover !important;
+        background-position: center !important;
+      }
+
+      .bento {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(230px, auto);
+        gap: 16px;
+        perspective: 1200px;
+      }
+      .bc {
+        position: relative;
+        overflow: hidden;
+        border-radius: 28px;
+        padding: 28px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 6px;
+        transition:
+          transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+          border-color 0.3s;
+      }
+      .bc:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          320px circle at var(--mx, 50%) var(--my, 50%),
+          rgba(255, 210, 70, 0.3),
+          transparent 60%
+        );
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .bc:hover {
+        transform: translateY(-6px);
+        border-color: rgba(255, 200, 60, 0.7);
+      }
+      .bc:hover:before {
+        opacity: 1;
+      }
+      .bc > * {
+        position: relative;
+      }
+      .bc svg {
+        width: 46px;
+        height: 46px;
+        stroke: #e8892a;
+        fill: none;
+        stroke-width: 1.5;
+        margin-bottom: auto;
+      }
+      .bc h3 {
+        font-size: 1.6rem;
+      }
+      .bc p {
+        color: #c5e3d2;
+        font-size: 0.97rem;
+        max-width: 36ch;
+      }
+      .chip {
+        align-self: flex-start;
+        font-size: 0.8rem;
+        font-weight: 700;
+        padding: 0.3em 0.85em;
+        border-radius: 99px;
+        background: rgba(255, 255, 255, 0.14);
+        margin-bottom: 6px;
+      }
+      .b1 {
+        grid-column: span 2;
+        grid-row: span 2;
+        background: var(--yg);
+        color: #1a1205;
+        border: 0;
+      }
+      .b1 p {
+        color: #3a2a05;
+        font-size: 1.05rem;
+      }
+      .b1 svg {
+        stroke: #1a1205;
+        width: 76px;
+        height: 76px;
+      }
+      .b1 h3 {
+        font-size: clamp(2.4rem, 4.5vw, 4rem);
+      }
+      .b1 .chip {
+        background: rgba(0, 0, 0, 0.13);
+      }
+      .b1:before {
+        background: radial-gradient(
+          320px circle at var(--mx, 50%) var(--my, 50%),
+          rgba(255, 255, 255, 0.5),
+          transparent 60%
+        );
+      }
+      .b4,
+      .b5,
+      .b6 {
+        grid-column: span 2;
+      }
+      @media (max-width: 820px) {
+        .bento {
+          grid-template-columns: 1fr 1fr;
+        }
+        .b1 {
+          grid-row: auto;
+        }
+        .b4,
+        .b5,
+        .b6 {
+          grid-column: span 2;
+        }
+      }
+      @media (max-width: 560px) {
+        .bento {
+          grid-template-columns: 1fr;
+        }
+        .b1,
+        .b4,
+        .b5,
+        .b6 {
+          grid-column: auto;
+        }
+      }
+      #parks {
+        position: relative;
+        overflow: hidden;
+        color: #fff;
+        background: #04371f;
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+      }
+      .pbg {
+        position: absolute;
+        inset: -6%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.42;
+        filter: blur(3px) saturate(1.2);
+      }
+      #parks:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(
+          100deg,
+          #04371f 8%,
+          rgba(4, 55, 31, 0.55) 55%,
+          rgba(4, 55, 31, 0.1)
+        );
+      }
+      .pk {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: clamp(30px, 5vw, 80px);
+        align-items: center;
+        width: 100%;
+      }
+      .cnt {
+        font-weight: 500;
+        color: #cfe6d8;
+      }
+      .cnt b {
+        font: 400 4.5rem/1 "Marcellus";
+        background: var(--yg);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      #pt {
+        font-size: clamp(2.8rem, 7vw, 6rem);
+        margin: 8px 0 16px;
+      }
+      #pd {
+        max-width: 52ch;
+        color: #d8eadf;
+        margin-bottom: 22px;
+      }
+      #pf {
+        margin: 0 0 28px;
+        padding: 0;
+        list-style: none;
+        max-width: 52ch;
+      }
+      #pf li {
+        display: flex;
+        gap: 18px;
+        padding: 12px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+      }
+      #pf b {
+        min-width: 100px;
+        color: #e8892a;
+      }
+      .ctl {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin: 30px 0px;
+      }
+      .ctl > button {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 1.5px solid rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        font-size: 1.3rem;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .ctl > button:hover {
+        background: var(--yg);
+        color: #1a1205;
+        border-color: transparent;
+        transform: scale(1.1);
+      }
+      .dots {
+        display: flex;
+        gap: 8px;
+        margin-left: 10px;
+      }
+      .dots button {
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        border-radius: 99px;
+        border: 0;
+        background: rgba(255, 255, 255, 0.35);
+        cursor: pointer;
+        transition: width 0.4s;
+      }
+      .dots button.on {
+        width: 34px;
+        background: var(--yg);
+      }
+      .pimg {
+        position: relative;
+        aspect-ratio: 4/5;
+        max-height: 72vh;
+        margin-left: auto;
+        width: min(100%, 460px);
+        border-radius: 34px;
+        background-size: cover;
+        background-position: center;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow:
+          0 40px 80px -20px rgba(0, 0, 0, 0.6),
+          0 0 0 10px rgba(255, 255, 255, 0.07);
+      }
+      .pimg .tag {
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        background: rgba(0, 0, 0, 0.35);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        padding: 0.35em 1em;
+        border-radius: 99px;
+        font-size: 0.85rem;
+      }
+      @media (max-width: 860px) {
+        .pk {
+          grid-template-columns: 1fr;
+        }
+        .pimg {
+          margin: 0 auto;
+          max-height: 50vh;
+        }
+      }
+
+      :root {
+        --o: #e2700c;
+        --yg: linear-gradient(135deg, #f08a1c, #d65d06);
+      }
+      h1,
+      h2,
+      h3 {
+        font-weight: 400;
+      }
+      .btn {
+        background: var(--o);
+        color: #fff;
+        font-weight: 600;
+      }
+      .btn:hover {
+        color: #fff;
+        box-shadow: 0 14px 28px -10px rgba(226, 112, 12, 0.7);
+      }
+      .btn.ghost {
+        background: transparent;
+        color: var(--ink);
+        border: 1.5px solid rgba(0, 0, 0, 0.28);
+      }
+      .btn.ghost:before {
+        background: var(--o);
+      }
+      .btn.ghost:hover {
+        color: #fff;
+        border-color: var(--o);
+      }
+      .bar {
+        color: var(--ink);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.92),
+          rgba(255, 255, 255, 0.6)
+        );
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow:
+          inset 0 1px 0 #fff,
+          inset 0 -1px 0 rgba(0, 0, 0, 0.05),
+          0 12px 28px -16px rgba(0, 0, 0, 0.35);
+      }
+      .bar img.lg-i {
+        display: block;
+        height: 38px;
+        width: auto;
+      }
+      .about .row {
+        align-items: center;
+      }
+      .aimg {
+        aspect-ratio: 4/5;
+        border-radius: 30px;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.4);
+      }
+      .stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 36px;
+      }
+      .stat {
+        display: block;
+        border-bottom: 0;
+        border-top: 2px solid var(--o);
+        padding: 14px 0 0;
+      }
+      .stat b {
+        display: block;
+        font-size: 3rem;
+      }
+      .stat span {
+        font-size: 0.9rem;
+      }
+      .bc {
+        background-size: cover;
+        background-position: center;
+      }
+      .bc svg {
+        stroke: #f28a1e;
+      }
+      .chip,
+      .b1 .chip {
+        background: var(--o);
+        color: #fff;
+      }
+      .b1 {
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+      }
+      .b1 p {
+        color: #e6f2ea;
+      }
+      .b1 svg {
+        stroke: #f28a1e;
+      }
+      .b1:before,
+      .bc:before {
+        background: radial-gradient(
+          320px circle at var(--mx, 50%) var(--my, 50%),
+          rgba(226, 112, 12, 0.35),
+          transparent 60%
+        );
+      }
+      #pf b {
+        color: #f28a1e;
+      }
+
+      :root {
+        --o: #d1700f;
+        --yg: linear-gradient(135deg, #e8891f, #c9650b);
+      }
+      h1,
+      h2,
+      h3 {
+        letter-spacing: 0.01em;
+        line-height: 1.12;
+      }
+      .btn {
+        color: #fff;
+      }
+      .q.open i {
+        color: #fff;
+      }
+      .btn.ghost {
+        color: #1a1a1a;
+        border: 1.5px solid #1a1a1a;
+      }
+      .btn.ghost:hover {
+        color: #fff;
+        border-color: transparent;
+      }
+      .bar {
+        color: var(--ink);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.96),
+          rgba(255, 255, 255, 0.78)
+        );
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow:
+          inset 0 1px 0 #fff,
+          0 12px 26px -14px rgba(0, 0, 0, 0.4),
+          0 1px 0 rgba(0, 0, 0, 0.05);
+      }
+      .bar img {
+        height: 40px;
+        width: auto;
+        display: block;
+      }
+      header.sc .bar img {
+        height: 34px;
+      }
+      .about h2 {
+        font-size: clamp(1.4rem, 3vw, 2.6rem);
+        max-width: 30ch;
+        line-height: 1.3;
+        font-weight: 600;
+      }
+      .head h2 {
+        font-size: clamp(1.7rem, 3.4vw, 3rem);
+        max-width: 20ch;
+      }
+      .bk h2 {
+        font-size: clamp(1.9rem, 4vw, 3.4rem);
+      }
+      .faq h2 {
+        font-size: clamp(1.8rem, 3.6vw, 3rem);
+      }
+      .stat b {
+        font-size: 3rem;
+      }
+      .bc h3 {
+        font-size: 1.25rem;
+      }
+      .b1 h3 {
+        font-size: clamp(1.9rem, 3.4vw, 3rem);
+      }
+      .q button {
+        font-size: 1.02rem;
+      }
+      #pt {
+        font-size: clamp(2rem, 4.6vw, 4rem);
+      }
+      .cnt b {
+        font-size: 3.6rem;
+      }
+      .b1 {
+        color: #fff;
+      }
+      .b1 p {
+        color: #fff3e4;
+      }
+      .b1 svg {
+        stroke: #fff;
+      }
+      .b1 .chip {
+        background: rgba(255, 255, 255, 0.22);
+      }
+      .b1:before {
+        background: radial-gradient(
+          320px circle at var(--mx, 50%) var(--my, 50%),
+          rgba(255, 255, 255, 0.3),
+          transparent 60%
+        );
+      }
+      .bc > .bgi {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.2;
+        transition: transform 0.8s;
+      }
+      .bc:hover > .bgi {
+        transform: scale(1.12);
+      }
+      .ph-row {
+        display: grid;
+        grid-template-columns: 1.3fr 1fr 1fr;
+        gap: 16px;
+        margin-bottom: 60px;
+      }
+      .phw {
+        overflow: hidden;
+        border-radius: 26px;
+        height: clamp(200px, 30vw, 380px);
+        position: relative;
+      }
+      .ph {
+        position: absolute;
+        inset: -10%;
+        background-size: cover;
+        background-position: center;
+      }
+      @media (max-width: 700px) {
+        .ph-row {
+          grid-template-columns: 1fr 1fr;
+        }
+        .phw:first-child {
+          grid-column: span 2;
+        }
+      }
+
+      /* Modern Typography Defaults */
+      body {
+        font-family:
+          "Plus Jakarta Sans",
+          system-ui,
+          -apple-system,
+          sans-serif !important;
+        letter-spacing: -0.01em;
+      }
+      h1,
+      h2,
+      h3,
+      .h1,
+      .h2,
+      .h3,
+      #pre b,
+      .head h2,
+      .bk h2,
+      .faq h2 {
+        font-family: "Outfit", sans-serif !important;
+        letter-spacing: -0.025em;
+        font-weight: 800;
+      }
+      .kick {
+        font-family: "Outfit", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-size: 0.85rem;
+      }
+
+      /* Realistic Safari Hero Stage & Parallax Actors */
+      .safari-hero-stage {
+        position: relative;
+        min-height: 440px;
+        margin: 20px calc(-1 * clamp(20px, 5vw, 72px)) 0;
+        overflow: hidden;
+        border-radius: 28px 28px 0 0;
+        background: radial-gradient(
+          130% 90% at 50% 10%,
+          #1e3a2c 0%,
+          #0d2118 60%,
+          #08150f 100%
+        );
+        box-shadow: inset 0 20px 40px rgba(0, 0, 0, 0.5);
+      }
+      .safari-backdrop {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            circle at 65% 35%,
+            rgba(245, 163, 15, 0.18),
+            transparent 55%
+          ),
+          linear-gradient(
+            to top,
+            rgba(8, 21, 15, 0.95) 10%,
+            rgba(8, 21, 15, 0.3) 70%,
+            transparent
+          );
+        pointer-events: none;
+        z-index: 1;
+      }
+      .safari-track {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 0 4vw 48px;
+        z-index: 2;
+      }
+      .safari-actor {
+        position: relative;
+        will-change: transform;
+        transition: filter 0.3s ease;
+      }
+      .gypsy-actor {
+        width: clamp(280px, 34vw, 520px);
+        transform-origin: bottom left;
+        filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.65));
+      }
+      .gypsy-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 18px;
+        object-fit: cover;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .dust-kick {
+        position: absolute;
+        left: -15px;
+        bottom: -5px;
+        width: 120px;
+        height: 35px;
+        background: radial-gradient(
+          ellipse at center,
+          rgba(210, 160, 90, 0.35),
+          transparent 70%
+        );
+        filter: blur(8px);
+        pointer-events: none;
+      }
+      .tiger-actor {
+        width: clamp(260px, 32vw, 480px);
+        transform-origin: bottom right;
+        filter: drop-shadow(0 22px 34px rgba(0, 0, 0, 0.7));
+      }
+      .tiger-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 18px;
+        object-fit: cover;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .tiger-glow {
+        position: absolute;
+        right: 10%;
+        bottom: -10px;
+        width: 80%;
+        height: 25px;
+        background: radial-gradient(
+          ellipse,
+          rgba(242, 140, 30, 0.28),
+          transparent 70%
+        );
+        filter: blur(10px);
+      }
+      .safari-ground {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 52px;
+        background: linear-gradient(to top, #091710 40%, transparent);
+        z-index: 3;
+        pointer-events: none;
+      }
+
+      @media (max-width: 768px) {
+        .safari-hero-stage {
+          min-height: 360px;
+          margin-top: 15px;
+        }
+        .safari-track {
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          padding-bottom: 24px;
+        }
+        .gypsy-actor,
+        .tiger-actor {
+          width: 85%;
+        }
+      }
+
+      /* Modern Bento Safari Service Cards & Icons */
+      .bc {
+        position: relative;
+        overflow: hidden;
+        background-size: cover !important;
+        background-position: center !important;
+        transition:
+          transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.4s ease;
+      }
+      .bc:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+      }
+      .bc-icon-badge {
+        width: 52px;
+        height: 52px;
+        padding-top: 10px;
+        border-radius: 14px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        color: #ffb74d;
+        margin-bottom: 16px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      }
+      .bc-icon-badge svg {
+        width: 26px;
+        height: 26px;
+        stroke: currentColor;
+        stroke-width: 2;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      /* =========================================================
+         TRUE LUXURY TYPOGRAPHY SYSTEM
+         ========================================================= */
+      :root {
+        --font-luxury: "Cinzel", "Cormorant Garamond", Georgia, serif;
+        --font-serif: "Cormorant Garamond", Georgia, serif;
+        --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+        --amber-glow: #f5a30f;
+        --gold-bright: #ffc107;
+        --gold-soft: #ffe484;
+      }
+      body {
+        font-family: var(--font-sans) !important;
+        letter-spacing: 0.005em;
+        color: #f0f4f1;
+      }
+      h1,
+      h2,
+      h3,
+      .h1,
+      .h2,
+      .h3,
+      #pre b,
+      .head h2,
+      .bk h2,
+      .faq h2,
+      #pt,
+      nav {
+        font-family: var(--font-luxury) !important;
+        letter-spacing: 0.04em !important;
+      }
+      h1 {
+        font-weight: 700 !important;
+        letter-spacing: 0.045em !important;
+        line-height: 1.04 !important;
+        text-transform: uppercase;
+      }
+      h1 .or {
+        color: #f5a30f !important;
+        text-shadow: 0 0 30px rgba(245, 163, 15, 0.4);
+      }
+      .kick {
+        font-family: var(--font-luxury) !important;
+        letter-spacing: 0.22em !important;
+        text-transform: uppercase !important;
+        font-size: 0.82rem !important;
+        font-weight: 700 !important;
+        color: #ffb703 !important;
+      }
+      .hero-p {
+        font-family: var(--font-sans) !important;
+        font-size: 1.14rem !important;
+        line-height: 1.7 !important;
+        color: #dce7e1 !important;
+        max-width: 48ch;
+      }
+      nav a {
+        font-family: var(--font-luxury) !important;
+        letter-spacing: 0.09em !important;
+        text-transform: uppercase !important;
+        font-size: 0.88rem !important;
+        font-weight: 600 !important;
+      }
+      .btn {
+        font-family: var(--font-sans) !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.04em !important;
+        text-transform: uppercase !important;
+        font-size: 0.86rem !important;
+      }
+
+      /* =========================================================
+         STAGE VECTOR ARTWORK STYLING
+         ========================================================= */
+      .stage {
+        position: relative;
+        min-height: 420px;
+        margin: 30px calc(-1 * clamp(20px, 5vw, 72px)) 0;
+        overflow: hidden;
+      }
+      #scn {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      #tgrGraphic,
+      #gypGraphic {
+        will-change: transform;
+      }
+
+      /* =========================================================
+         ABOUT US - RIGHT TIGER IMAGE WITH REFINED LUXURY BADGE
+         ========================================================= */
+      .aimg {
+        position: relative;
+        aspect-ratio: 4/5;
+        border-radius: 26px !important;
+        background-size: cover !important;
+        background-position: center 25% !important;
+        box-shadow: 0 25px 65px -15px rgba(0, 0, 0, 0.65) !important;
+        border: 1px solid rgba(255, 255, 255, 0.16) !important;
+        overflow: hidden;
+        transition:
+          transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.5s ease;
+      }
+      .aimg:hover {
+        transform: scale(1.02);
+        box-shadow: 0 35px 80px -15px rgba(0, 0, 0, 0.8) !important;
+      }
+      .aimg-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(8, 20, 14, 0.9) 0%,
+          rgba(8, 20, 14, 0.2) 50%,
+          transparent 100%
+        );
+        display: flex;
+        align-items: flex-end;
+        padding: 24px;
+      }
+      .aimg-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(10, 26, 18, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(245, 163, 15, 0.35);
+        padding: 8px 18px;
+        border-radius: 99px;
+        color: #ffb703;
+        font-family: var(--font-luxury);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      }
+      .pulse-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #f5a30f;
+        box-shadow: 0 0 10px #f5a30f;
+        animation: pdot 2s infinite ease-in-out;
+      }
+      @keyframes pdot {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.4);
+          opacity: 0.7;
+        }
+      }
+
+      /* =========================================================
+         SERVICE CARDS - HIGH CONTRAST & CRYSTAL READABILITY
+         ========================================================= */
+      .bento .bc {
+        position: relative;
+        overflow: hidden;
+        border-radius: 24px !important;
+        background-size: cover !important;
+        background-position: center !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        padding: 38px 32px 34px !important;
+        min-height: 330px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-end !important;
+        box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.6) !important;
+        transition:
+          transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.4s ease !important;
+      }
+      .bento .bc::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(6, 16, 11, 0.45) 0%,
+          rgba(5, 14, 9, 0.75) 45%,
+          rgba(3, 9, 6, 0.96) 100%
+        ) !important;
+        z-index: 1;
+        transition: opacity 0.4s ease;
+      }
+      .bento .bc:hover::before {
+        background: linear-gradient(
+          180deg,
+          rgba(6, 16, 11, 0.3) 0%,
+          rgba(5, 14, 9, 0.65) 45%,
+          rgba(3, 9, 6, 0.98) 100%
+        ) !important;
+      }
+      .bento .bc:hover {
+        transform: translateY(-8px) !important;
+        box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8) !important;
+      }
+      .bento .bc > * {
+        position: relative;
+        z-index: 2;
+      }
+      .bento .bc h3 {
+        font-family: var(--font-luxury) !important;
+        font-size: 1.55rem !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        letter-spacing: 0.04em !important;
+        text-transform: uppercase !important;
+        margin: 14px 0 10px !important;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9) !important;
+      }
+      .bento .bc p {
+        color: #e5eee8 !important;
+        font-size: 0.96rem !important;
+        line-height: 1.65 !important;
+        font-weight: 450 !important;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85) !important;
+      }
+      .bento .bc .chip {
+        align-self: flex-start;
+        display: inline-block;
+        font-family: var(--font-sans) !important;
+        font-size: 0.76rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.07em !important;
+        text-transform: uppercase !important;
+        background: rgba(255, 183, 3, 0.22) !important;
+        color: #ffc107 !important;
+        border: 1px solid rgba(255, 183, 3, 0.45) !important;
+        padding: 5px 14px !important;
+        border-radius: 99px !important;
+        backdrop-filter: blur(10px) !important;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
+      }
+      .bc-icon-badge {
+        width: 56px !important;
+        height: 56px !important;
+        border-radius: 16px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: rgba(245, 163, 15, 0.16) !important;
+        backdrop-filter: blur(14px) !important;
+        border: 1.5px solid rgba(255, 183, 3, 0.45) !important;
+        color: #ffc107 !important;
+        margin-bottom: auto !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+      }
+
+      /* =========================================================
+         PARKS SLIDER - LUXURIOUS WARM AMBER & SUNSET GOLD (NO GREEN)
+         ========================================================= */
+      #parks {
+        position: relative;
+        background: radial-gradient(
+          130% 100% at 75% 20%,
+          #301d07 0%,
+          #191004 52%,
+          #0c0802 100%
+        ) !important;
+        color: #fff !important;
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+      #parks::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(
+          105deg,
+          #160e03 10%,
+          rgba(22, 14, 3, 0.78) 55%,
+          rgba(22, 14, 3, 0.2)
+        ) !important;
+      }
+      .pbg {
+        filter: blur(4px) saturate(1.3) !important;
+      }
+      .cnt {
+        font-weight: 500;
+        color: #fce8bd !important;
+      }
+      .cnt b {
+        font: 700 4.8rem/1 var(--font-luxury) !important;
+        background: linear-gradient(
+          135deg,
+          #ffe066 0%,
+          #f5a30f 50%,
+          #e07008 100%
+        ) !important;
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        color: transparent !important;
+        filter: drop-shadow(0 4px 18px rgba(245, 163, 15, 0.45)) !important;
+      }
+      #pt {
+        font-family: var(--font-luxury) !important;
+        font-size: clamp(2.8rem, 6.5vw, 5.5rem) !important;
+        letter-spacing: 0.04em !important;
+        color: #ffffff !important;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      }
+      #pd {
+        color: #edd9ba !important;
+        font-size: 1.15rem !important;
+        line-height: 1.7 !important;
+        max-width: 50ch;
+      }
+      #pf li {
+        border-bottom: 1px solid rgba(245, 163, 15, 0.25) !important;
+        color: #f5eedf !important;
+      }
+      #pf li b {
+        color: #ffb703 !important;
+        font-family: var(--font-luxury) !important;
+        letter-spacing: 0.08em !important;
+      }
+      #ptag {
+        background: rgba(245, 163, 15, 0.25) !important;
+        color: #ffc107 !important;
+        border: 1px solid rgba(255, 183, 3, 0.45) !important;
+        font-family: var(--font-luxury) !important;
+        letter-spacing: 0.1em !important;
+      }
+      #pb {
+        background: linear-gradient(
+          135deg,
+          #ffc837 0%,
+          #f28c1e 100%
+        ) !important;
+        color: #160e03 !important;
+        font-weight: 700 !important;
+        font-family: var(--font-sans) !important;
+        letter-spacing: 0.06em !important;
+        box-shadow: 0 10px 28px -5px rgba(242, 140, 30, 0.55) !important;
+      }
+      .ctl button {
+        border: 1.5px solid rgba(245, 163, 15, 0.45) !important;
+        color: #ffd778 !important;
+        background: rgba(30, 18, 5, 0.7) !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      }
+      .ctl button:hover {
+        background: #f5a30f !important;
+        color: #160e03 !important;
+        border-color: #f5a30f !important;
+        box-shadow: 0 0 20px rgba(245, 163, 15, 0.7) !important;
+      }
+      .dots button.on {
+        background: #f5a30f !important;
+        box-shadow: 0 0 14px #f5a30f !important;
+      }
+      .pimg {
+        border: 1px solid rgba(255, 183, 3, 0.3) !important;
+        box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.8) !important;
+      }
+
+      /* =========================================================
+         TYPOGRAPHY SYSTEM MATCHING SS3 & SS4
+         ========================================================= */
+      :root {
+        --font-serif-heading:
+          "DM Serif Display", "Playfair Display", Georgia, serif;
+        --font-serif-sub: "Playfair Display", Georgia, serif;
+        --font-body: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+        --color-orange: #e8590c;
+        --color-orange-bright: #f2610f;
+        --color-amber: #f5a30f;
+        --color-yellow: #ffc107;
+        --color-ink-dark: #161817;
+        --color-ink-muted: #55625a;
+        --bg-light-minimal: #fbfaf6;
+        --bg-light-card: #ffffff;
+      }
+
+      body {
+        font-family: var(--font-body) !important;
+        background: #0d1e17;
+        color: #f0f4f1;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      .h1,
+      .h2,
+      .h3,
+      #pre b,
+      .head h2,
+      .bk h2,
+      .faq h2,
+      #pt {
+        font-family: var(--font-serif-heading) !important;
+        font-weight: 400 !important;
+      }
+
+      /* =========================================================
+         SECTION 1: HERO CONTAINER (IN DOCUMENT FLOW)
+         ========================================================= */
+      #hero,
+      .hero-section {
+        position: relative;
+        width: 100% !important;
+        height: 100vh !important;
+        min-height: 100vh !important;
+        background: radial-gradient(
+          120% 90% at 70% 30%,
+          #163226 0%,
+          #0c2118 45%,
+          #06130e 100%
+        ) !important;
+        color: #ffffff !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        pointer-events: auto !important;
+        z-index: 2 !important;
+      }
+
+      /* =========================================================
+         SECTION 1: HERO DECOR (MINIMIZED LEFT TREE + RIGHT SKY BIRDS)
+         ========================================================= */
+      .hero-forest-decor {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+        overflow: hidden;
+      }
+      .forest-decor-left {
+        position: absolute;
+        top: 0;
+        left: -15px;
+        bottom: 0;
+        width: clamp(140px, 16vw, 240px);
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+        opacity: 0.9;
+        transition: transform 0.3s ease;
+      }
+      .forest-decor-left svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .forest-decor-birds-right {
+        position: absolute;
+        top: clamp(65px, 9.5vh, 120px);
+        right: clamp(25px, 5vw, 110px);
+        width: clamp(240px, 26vw, 360px);
+        height: 140px;
+        z-index: 2;
+        pointer-events: none;
+      }
+      .forest-decor-birds-right svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .hero-bird.bird-primary {
+        animation: birdSoar 7s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .hero-bird.bird-secondary {
+        animation: birdSoarSec 6s ease-in-out infinite 1s;
+        transform-origin: center;
+      }
+      .hero-bird.bird-tertiary {
+        animation: birdSoarTert 8s ease-in-out infinite 0.5s;
+        transform-origin: center;
+      }
+      @keyframes birdSoar {
+        0%,
+        100% {
+          transform: translate(200px, 75px) rotate(0deg) scale(1);
+        }
+        50% {
+          transform: translate(175px, 60px) rotate(-4deg) scale(1.05);
+        }
+      }
+      @keyframes birdSoarSec {
+        0%,
+        100% {
+          transform: translate(70px, 45px) scale(0.55) rotate(-12deg);
+        }
+        50% {
+          transform: translate(50px, 35px) scale(0.58) rotate(-7deg);
+        }
+      }
+      @keyframes birdSoarTert {
+        0%,
+        100% {
+          transform: translate(305px, 120px) scale(0.42) rotate(16deg);
+        }
+        50% {
+          transform: translate(325px, 108px) scale(0.45) rotate(11deg);
+        }
+      }
+
+      .hero-section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        min-height: 100vh;
+        background: radial-gradient(
+          120% 90% at 70% 30%,
+          #163226 0%,
+          #0c2118 45%,
+          #06130e 100%
+        );
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+      }
+      .stripes {
+        position: absolute;
+        inset: -10% -5%;
+        width: 110%;
+        height: 120%;
+        pointer-events: none;
+        z-index: 1;
+      }
+      .stripes path {
+        fill: #03130c;
+        opacity: 0.35;
+      }
+      .hero-container {
+        position: relative !important;
+        z-index: 2 !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 1240px !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        padding: 72px 20px 0 !important;
+        text-align: center !important;
+      }
+
+      /* HERO TEXT: ABSOLUTELY ZERO SHADOW */
+      .hero-txt {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        max-width: 840px !important;
+        margin: 0 auto !important;
+        position: relative !important;
+        z-index: 4 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        filter: none !important;
+      }
+
+      #hero .kick {
+        background: rgba(255, 183, 3, 0.16) !important;
+        color: #ffc107 !important;
+        border: 1px solid rgba(255, 193, 7, 0.45) !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        filter: none !important;
+        font-family: var(--font-sans) !important;
+        font-size: 0.84rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.08em !important;
+        text-transform: uppercase !important;
+        padding: 6px 18px !important;
+        border-radius: 99px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        margin-bottom: 8px !important;
+        backdrop-filter: blur(8px) !important;
+      }
+      #hero .kick .paw {
+        fill: #ffc107 !important;
+        width: 15px !important;
+        height: 15px !important;
+        filter: none !important;
+      }
+
+      #hero h1 {
+        font-family: var(--font-serif-heading) !important;
+        font-size: clamp(2.4rem, 4.6vw, 4.2rem) !important;
+        font-weight: 400 !important;
+        line-height: 1.08 !important;
+        letter-spacing: -0.015em !important;
+        color: #ffffff !important;
+        margin: 6px 0 12px !important;
+        text-transform: none !important;
+        text-shadow: none !important;
+        filter: none !important;
+      }
+      #hero h1 .ln span {
+        color: #ffffff !important;
+        text-shadow: none !important;
+        filter: none !important;
+      }
+
+      #hero .hero-p {
+        font-family: var(--font-sans) !important;
+        font-size: clamp(0.96rem, 1.2vw, 1.1rem) !important;
+        line-height: 1.65 !important;
+        color: #d1e5db !important;
+        max-width: 52ch !important;
+        margin: 0 auto 14px !important;
+        text-shadow: none !important;
+        filter: none !important;
+      }
+
+      #hero .cta {
+        display: flex !important;
+        gap: 16px !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+        margin-bottom: 0px !important;
+      }
+
+      #hero .btn.ghost {
+        background: transparent !important;
+        color: #ffffff !important;
+        border: 2px solid rgba(255, 255, 255, 0.45) !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+      }
+      #hero .btn.ghost:hover {
+        background: #ffffff !important;
+        color: #0d2218 !important;
+        border-color: #ffffff !important;
+      }
+
+      /* Hero Stage & Tiger Card: Perfectly balanced below CTA buttons */
+      .hero-container {
+        position: relative !important;
+        z-index: 4 !important;
+        width: 100% !important;
+        max-width: 1240px !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        padding: clamp(65px, 8.5vh, 80px) 20px 0 !important;
+        text-align: center !important;
+        pointer-events: none !important;
+      }
+      .hero-txt {
+        pointer-events: auto !important;
+      }
+      .hero-image-stage {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        pointer-events: none !important;
+        z-index: 2 !important;
+        overflow: hidden !important;
+      }
+      .hero-image-card {
+        position: absolute;
+        left: 50%;
+        top: 78%;
+        width: 52vw;
+        height: 36vh;
+        border-radius: 20px;
+        overflow: hidden;
+        pointer-events: auto;
+        box-shadow: 0 24px 60px -15px rgba(0, 0, 0, 0.7);
+        border: 2px solid rgba(255, 255, 255, 0.25);
+        will-change: width, height, top, border-radius, box-shadow;
+      }
+      .hero-tiger-photo {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center 32% !important;
+        display: block !important;
+        will-change: transform;
+      }
+
+      /* =========================================================
+         SECTION 3: SERVICES (PREVIOUS LIGHT BEIGE BG & HIGH CONTRAST)
+         ========================================================= */
+      #services {
+        background: #f4f2eb !important;
+        color: #14231c !important;
+        padding: clamp(70px, 9vw, 110px) 0 !important;
+        position: relative !important;
+        z-index: 3 !important;
+      }
+      #services .head h2 {
+        font-family: var(--font-serif-heading) !important;
+        font-size: clamp(2.4rem, 5vw, 4.2rem) !important;
+        color: #14231c !important;
+        margin-bottom: 12px !important;
+      }
+      #services .head p {
+        color: #5d6b64 !important;
+        font-size: 1.1rem !important;
+        max-width: 55ch !important;
+      }
+
+      /* ==========================================================================
+         SECTION 3: GUARANTEED CRISP SAFARI BENTO IMAGES WITH DARK OVERLAYS
+         ========================================================================== */
+      .bento .bc.b1,
+      .bc.b1 {
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(5, 15, 10, 0.1) 0%,
+            rgba(5, 15, 10, 0.6) 45%,
+            rgba(4, 12, 8, 0.95) 100%
+          ),
+          url("https://i.pinimg.com/736x/f9/d0/42/f9d042ab24c6dd1a87881d0b8d78e18f.jpg") !important;
+        background-size: cover !important;
+        background-position: center !important;
+      }
+      .bento .bc.b2,
+      .bc.b2 {
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(5, 15, 10, 0.1) 0%,
+            rgba(5, 15, 10, 0.6) 45%,
+            rgba(4, 12, 8, 0.95) 100%
+          ),
+          url("https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=900&q=80") !important;
+        background-size: cover !important;
+        background-position: center !important;
+      }
+      .bento .bc.b3,
+      .bc.b3 {
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(5, 15, 10, 0.1) 0%,
+            rgba(5, 15, 10, 0.6) 45%,
+            rgba(4, 12, 8, 0.95) 100%
+          ),
+          url("https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=900&q=80") !important;
+        background-size: cover !important;
+        background-position: center !important;
+      }
+      .bento .bc.b4,
+      .bc.b4 {
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(5, 15, 10, 0.1) 0%,
+            rgba(5, 15, 10, 0.6) 45%,
+            rgba(4, 12, 8, 0.95) 100%
+          ),
+          url("https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=900&q=80") !important;
+        background-size: cover !important;
+        background-position: center !important;
+      }
+
+      /* Clean override of the old solid yellow on .b1 */
+      .b1 {
+        background: transparent !important;
+      }
+
+      /* ==========================================================================
+         SECTION 2: WIDER TIGER MAP IMAGE & ENHANCED ABOUT LAYOUT
+         ========================================================================== */
+      .about-section {
+        background-color: #fbfaf6 !important;
+        background-image: none !important;
+        padding: 95px 0 90px !important;
+        color: #14231c !important;
+        position: relative !important;
+        z-index: 3 !important;
+      }
+
+      .about-wrap {
+        display: block !important;
+        max-width: 1400px !important; /* MUCH WIDER CONTAINER */
+        margin: 0 auto !important;
+        padding: 0 32px !important;
+        width: 100% !important;
+      }
+
+      .about-top-grid {
+        display: grid !important;
+        grid-template-columns: 0.9fr 1.3fr !important; /* WIDER IMAGE COLUMN */
+        gap: 56px !important;
+        align-items: center !important;
+        width: 100% !important;
+      }
+
+      .about-content-col {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+      }
+
+      .about-visual-col {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+      }
+
+      .map-artwork-container {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 820px !important; /* EXPANDED TO 820px */
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+      }
+
+      .map-artwork-img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        filter: drop-shadow(0 20px 45px rgba(20, 35, 28, 0.15)) !important;
+        transition: transform 0.4s ease !important;
+      }
+      .map-artwork-img:hover {
+        transform: scale(1.025) !important;
+      }
+
+      @media (max-width: 992px) {
+        .about-top-grid {
+          grid-template-columns: 1fr !important;
+          gap: 40px !important;
+        }
+        .map-artwork-container {
+          max-width: 600px !important;
+        }
+      }
+
+      /* =========================================================
+         SECTION 3: SAFARIS (SS3) - IMAGE FIRST & HOVER REVEAL
+         ========================================================= */
+      .bento .bc {
+        position: relative !important;
+        overflow: hidden !important;
+        border-radius: 22px !important;
+        background-size: cover !important;
+        background-position: center !important;
+        min-height: 390px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-end !important;
+        padding: 0 !important;
+        box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.25) !important;
+        transition:
+          transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+          box-shadow 0.4s ease !important;
+      }
+      .bento .bc:hover {
+        transform: translateY(-8px) !important;
+        box-shadow: 0 28px 56px -12px rgba(0, 0, 0, 0.45) !important;
+      }
+
+      /* Subtle initial dark vignette, deepening on hover */
+      .bento .bc::before {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.05) 0%,
+          rgba(0, 0, 0, 0.2) 60%,
+          rgba(5, 15, 10, 0.7) 100%
+        ) !important;
+        opacity: 0.35 !important;
+        transition:
+          opacity 0.45s ease,
+          background 0.45s ease !important;
+        z-index: 1 !important;
+      }
+      .bento .bc:hover::before {
+        opacity: 1 !important;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.15) 0%,
+          rgba(5, 15, 10, 0.7) 40%,
+          rgba(4, 12, 8, 0.98) 100%
+        ) !important;
+      }
+
+      /* Top-left icon badge - Frosted glass with razor-sharp SVG stroke */
+      .bc-icon-badge {
+        position: absolute !important;
+        top: 22px !important;
+        left: 22px !important;
+        z-index: 5 !important;
+        width: 52px !important;
+        height: 52px !important;
+        border-radius: 14px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: rgba(14, 25, 20, 0.65) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35) !important;
+        transition:
+          transform 0.35s ease,
+          border-color 0.35s ease !important;
+      }
+      .bento .bc:hover .bc-icon-badge {
+        transform: scale(1.08) !important;
+        border-color: var(--o) !important;
+      }
+      .bc-icon-badge svg {
+        width: 26px !important;
+        height: 26px !important;
+        fill: none !important;
+        stroke: var(--o) !important;
+        stroke-width: 2 !important;
+        stroke-linecap: round !important;
+        stroke-linejoin: round !important;
+      }
+
+      /* Content container - Reveal on hover */
+      .bento .bc .bc-content {
+        position: relative !important;
+        z-index: 3 !important;
+        padding: 30px 26px !important;
+        transform: translateY(24px) !important;
+        opacity: 0 !important;
+        transition:
+          transform 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+          opacity 0.35s ease !important;
+      }
+      .bento .bc:hover .bc-content {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+      }
+      .bento .bc .chip {
+        display: inline-block !important;
+        background: var(--o) !important;
+        color: #ffffff !important;
+        font-family: var(--font-sans) !important;
+        font-size: 0.76rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.06em !important;
+        text-transform: uppercase !important;
+        padding: 5px 14px !important;
+        border-radius: 99px !important;
+        margin-bottom: 12px !important;
+        box-shadow: 0 4px 12px rgba(234, 133, 28, 0.4) !important;
+      }
+      .bento .bc h3 {
+        font-family: var(--font-serif-heading) !important;
+        font-size: 1.65rem !important;
+        font-weight: 400 !important;
+        color: #ffffff !important;
+        margin: 0 0 8px !important;
+        letter-spacing: -0.01em !important;
+      }
+      .bento .bc p {
+        font-family: var(--font-sans) !important;
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        color: #e5eee8 !important;
+        margin: 0 !important;
+      }
+
+      @media (hover: none) {
+        .bento .bc::before {
+          opacity: 0.85 !important;
+        }
+        .bento .bc .bc-content {
+          transform: translateY(0) !important;
+          opacity: 1 !important;
+        }
+      }
+
+      /* =========================================================
+         SECTION 4: PARKS SLIDER (SS4) - YELLOW MATCHING HEADER
+         ========================================================= */
+      #parks .dots button.on {
+        background: var(--o) !important;
+        width: 32px !important;
+        border-radius: 99px !important;
+      }
+      #parks .ctl button:hover {
+        border-color: var(--o) !important;
+        color: var(--o) !important;
+      }
+      #parks #pf b {
+        color: var(--o) !important;
+      }
+      #parks .cnt b {
+        color: var(--o) !important;
+      }
+
+      /* =========================================================
+         SECTION 5: BOOKING FORM (SS5) - HIGH CONTRAST DARK TEXT & PURITY
+         ========================================================= */
+      #book {
+        background-color: #fbfaf6 !important;
+        padding: 100px 0 !important;
+        color: #14231c !important;
+      }
+      #book .bk {
+        display: grid !important;
+        grid-template-columns: 1fr 1.15fr !important;
+        gap: 64px !important;
+        align-items: center !important;
+        max-width: 1240px !important;
+        margin: 0 auto;
+        padding: 0 24px !important;
+      }
+      #book .bk > div h2 {
+        font-family: var(--font-serif-heading) !important;
+        font-size: clamp(2.4rem, 4.4vw, 3.8rem) !important;
+        font-weight: 400 !important;
+        line-height: 1.12 !important;
+        color: #14231c !important;
+        margin: 0 0 20px !important;
+        letter-spacing: -0.015em !important;
+      }
+      #book .bk > div p {
+        font-family: var(--font-sans) !important;
+        font-size: 1.05rem !important;
+        line-height: 1.7 !important;
+        color: #43544c !important;
+        margin: 0 0 32px !important;
+      }
+      #book .bk ul {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+      }
+      #book .bk ul li {
+        font-family: var(--font-sans) !important;
+        font-size: 1.02rem !important;
+        font-weight: 600 !important;
+        color: #14231c !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 14px !important;
+      }
+      #book .bk ul li .paw {
+        width: 20px !important;
+        height: 20px !important;
+        fill: var(--o) !important;
+        flex-shrink: 0 !important;
+      }
+
+      /* Booking Form Card */
+      #book form {
+        background: #ffffff !important;
+        border-radius: 24px !important;
+        padding: 40px 36px !important;
+        box-shadow: 0 16px 48px -10px rgba(20, 35, 28, 0.08) !important;
+        border: 1px solid rgba(20, 35, 28, 0.08) !important;
+      }
+      #book form label {
+        color: #14231c !important;
+        font-family: var(--font-sans) !important;
+        font-weight: 700 !important;
+        font-size: 0.88rem !important;
+        margin-bottom: 6px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 6px !important;
+      }
+      #book form input,
+      #book form select,
+      #book form textarea {
+        background: #fdfdfd !important;
+        border: 1.5px solid #d4dad6 !important;
+        border-radius: 12px !important;
+        padding: 12px 16px !important;
+        color: #14231c !important;
+        font-family: var(--font-sans) !important;
+        font-size: 0.96rem !important;
+        transition:
+          border-color 0.25s ease,
+          box-shadow 0.25s ease !important;
+      }
+      #book form input:focus,
+      #book form select:focus,
+      #book form textarea:focus {
+        outline: none !important;
+        border-color: var(--o) !important;
+        box-shadow: 0 0 0 3px rgba(234, 133, 28, 0.16) !important;
+      }
+
+      @media (max-width: 860px) {
+        #book .bk {
+          grid-template-columns: 1fr !important;
+          gap: 40px !important;
+        }
+        #book form {
+          padding: 28px 20px !important;
+        }
+      }
+
+      /* =========================================================
+         SECTION 6: FAQ - LIGHT YELLOW GOING TO WHITE GRADIENT (NO GREEN)
+         ========================================================= */
+      #faq {
+        background: linear-gradient(
+          180deg,
+          #fefcf6 0%,
+          #faf5e8 45%,
+          #ffffff 100%
+        ) !important;
+        color: #14231c !important;
+        padding: 110px 20px !important;
+      }
+      #faq .faq {
+        max-width: 860px !important;
+        margin: 0 auto !important;
+      }
+      #faq h2 {
+        font-family: var(--font-serif-heading) !important;
+        font-size: clamp(2.4rem, 4.2vw, 3.6rem) !important;
+        font-weight: 400 !important;
+        color: #14231c !important;
+        text-align: center !important;
+        margin: 0 0 52px !important;
+        letter-spacing: -0.015em !important;
+      }
+      #faq .q {
+        margin-bottom: 14px !important;
+        border: none !important;
+      }
+      #faq .q button {
+        background: #ffffff !important;
+        color: #14231c !important;
+        font-family: var(--font-sans) !important;
+        font-size: 1.08rem !important;
+        font-weight: 700 !important;
+        border: 1px solid rgba(220, 215, 200, 0.7) !important;
+        border-radius: 16px !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03) !important;
+        padding: 22px 26px !important;
+        text-align: left !important;
+        transition:
+          border-color 0.3s ease,
+          box-shadow 0.3s ease !important;
+      }
+      #faq .q button:hover {
+        border-color: var(--o) !important;
+        box-shadow: 0 6px 22px rgba(234, 133, 28, 0.12) !important;
+      }
+      #faq .q button i {
+        border-color: #14231c !important;
+      }
+      #faq .q button[aria-expanded="true"] {
+        border-color: var(--o) !important;
+        border-bottom-left-radius: 4px !important;
+        border-bottom-right-radius: 4px !important;
+      }
+      #faq .q button[aria-expanded="true"] i {
+        border-color: var(--o) !important;
+      }
+      #faq .q div p {
+        background: #ffffff !important;
+        border: 1px solid rgba(220, 215, 200, 0.7) !important;
+        border-top: none !important;
+        border-bottom-left-radius: 16px !important;
+        border-bottom-right-radius: 16px !important;
+        padding: 18px 26px 26px !important;
+        margin: 0 !important;
+        font-family: var(--font-sans) !important;
+        font-size: 1.02rem !important;
+        line-height: 1.72 !important;
+        color: #4b5d54 !important;
+      }
+
+      /* 3 STATS POINTS IN HORIZONTAL ROW (LEFT TO RIGHT) */
+      .about-stats-row {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 36px !important;
+        margin-top: 50px !important;
+        padding-top: 40px !important;
+        border-top: 1px solid rgba(20, 35, 28, 0.12) !important;
+        width: 100% !important;
+      }
+      .about-stat-item {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+      }
+      .stat-big-num {
+        font-family: var(--font-serif-heading) !important;
+        font-size: clamp(2.6rem, 4vw, 3.8rem) !important;
+        line-height: 1 !important;
+        color: var(--o) !important;
+        font-weight: 700 !important;
+        display: inline-flex !important;
+        align-items: baseline !important;
+        flex-shrink: 0 !important;
+      }
+      .stat-text-meta h4 {
+        font-family: var(--font-sans) !important;
+        font-size: 1.05rem !important;
+        font-weight: 700 !important;
+        color: #14231c !important;
+        margin: 0 0 4px !important;
+      }
+      .stat-text-meta p {
+        font-family: var(--font-sans) !important;
+        font-size: 0.88rem !important;
+        color: #55665d !important;
+        line-height: 1.5 !important;
+        margin: 0 !important;
+      }
+      @media (max-width: 820px) {
+        .about-stats-row {
+          grid-template-columns: 1fr !important;
+          gap: 24px !important;
+        }
+      }
+
+      /* =====================================================================
+         FIXES (v2)
+         ===================================================================== */
+
+      /* ---- FIX 1: HERO IMAGE ZOOM / EXPAND + NO OVERLAP ---- */
+      #hero .hero-image-stage {
+        position: absolute !important;
+        inset: 0 !important;
+        z-index: 2 !important;
+        pointer-events: none !important;
+        overflow: hidden !important;
+      }
+      /* card is always full-size; GSAP animates clip-path (GPU friendly, no layout thrash) */
+      #hero .hero-image-card {
+        position: absolute !important;
+        inset: 0 !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        overflow: hidden !important;
+        transform: none;
+        clip-path: inset(
+          62% 24% 8% 24% round 20px
+        ); /* fallback, JS overrides */
+        will-change: clip-path, opacity;
+      }
+      #hero .hero-tiger-photo {
+        transform-origin: 50% 50%;
+        will-change: transform;
+        background: #0c2118;
+      }
+      /* overlay is positioned to the SAME rectangle as the small preview card */
+      #hero .hero-image-overlay {
+        --rl: 24%;
+        --rt: 62%;
+        --rw: 52%;
+        --rh: 30%;
+        position: absolute;
+        left: var(--rl);
+        top: var(--rt);
+        width: var(--rw);
+        height: var(--rh);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: clamp(10px, 1.6vw, 18px);
+        pointer-events: none;
+        border-radius: 20px;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.35) 0%,
+          rgba(0, 0, 0, 0) 40%,
+          rgba(0, 0, 0, 0.45) 100%
+        );
+        color: #fff;
+        font-family: var(--font-sans);
+      }
+      .thumb-badge {
+        align-self: flex-start;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 14px;
+        border-radius: 99px;
+        background: rgba(10, 25, 18, 0.55);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        font-size: clamp(0.68rem, 1vw, 0.82rem);
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .pulse-amber {
+        flex: none;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #ffb703;
+        box-shadow: 0 0 0 0 rgba(255, 183, 3, 0.7);
+        animation: pulseAmber 1.8s infinite;
+      }
+      @keyframes pulseAmber {
+        70% {
+          box-shadow: 0 0 0 9px rgba(255, 183, 3, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(255, 183, 3, 0);
+        }
+      }
+      .scroll-prompt {
+        align-self: center;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: clamp(0.66rem, 0.95vw, 0.8rem);
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        opacity: 0.95;
+      }
+      .scroll-arrow {
+        width: 16px;
+        height: 16px;
+        animation: arrowBob 1.4s ease-in-out infinite;
+      }
+      @keyframes arrowBob {
+        50% {
+          transform: translateY(4px);
+        }
+      }
+      /* keep ticker + text above nothing, image never covers text */
+      #hero .mq {
+        z-index: 3;
+      }
+      #hero .hero-container {
+        z-index: 4 !important;
+      }
+
+      /* ---- FIX 2: SECTION 2 (ABOUT) HEADING + TYPE SCALE ---- */
+      .about-section .about-title-block {
+        margin-bottom: 22px;
+      }
+      .about-section .about-sub-serif {
+        display: block;
+        font-family: var(--font-serif-sub);
+        font-style: italic;
+        font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+        line-height: 1.3;
+        color: var(--color-orange);
+        margin-bottom: 10px;
+      }
+      .about-section h2.about-main-serif {
+        font-family: var(--font-serif-heading) !important;
+        font-size: clamp(2.2rem, 3.9vw, 3.6rem) !important;
+        font-weight: 400 !important;
+        line-height: 1.12 !important;
+        letter-spacing: -0.01em !important;
+        text-transform: none !important;
+        color: #14231c !important;
+        max-width: 14ch;
+        margin: 0 !important;
+      }
+      .about-section .about-lead {
+        font-family: var(--font-sans);
+        font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+        line-height: 1.6;
+        font-weight: 600;
+        color: #14231c;
+        max-width: 52ch;
+        margin: 6px 0 16px;
+      }
+      .about-section .about-body {
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        line-height: 1.75;
+        color: #4b5d54;
+        max-width: 60ch;
+        margin: 0 0 14px;
+      }
+      .about-section .about-action {
+        margin-top: 22px;
+      }
+      .about-section .explore-more-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-family: var(--font-sans);
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: var(--color-orange);
+        border-bottom: 2px solid currentColor;
+        padding-bottom: 2px;
+        transition: gap 0.25s;
+      }
+      .about-section .explore-more-link:hover {
+        gap: 12px;
+      }
+      .stat-unit {
+        color: var(--o);
+        font-family: var(--font-serif-heading);
+        font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+        margin-left: 2px;
+      }
+      .stat-big-num b {
+        font-weight: 400;
+      }
+
+      /* ---- FIX 3: CSS transitions must not fight GSAP-controlled transforms ---- */
+      .map-artwork-img {
+        transition: filter 0.4s ease !important;
+        will-change: transform;
+      }
+      .map-artwork-img:hover {
+        transform: none !important;
+      }
+      .bento .bc {
+        transition:
+          translate 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+          box-shadow 0.4s ease !important;
+      }
+      .bento .bc:hover {
+        transform: none !important;
+        translate: 0 -8px;
+      }
+      .lenis.lenis-stopped {
+        overflow: hidden;
+      }
+
+      /* =====================================================================
+         FIXES (v3)
+         ===================================================================== */
+      /* hero: kicker + heading, then image slot, then buttons below the image */
+      #hero .hero-container {
+        padding: clamp(84px, 11vh, 104px) 20px clamp(86px, 12vh, 108px) !important;
+        gap: 0 !important;
+        height: 100% !important;
+      }
+      #hero .hero-img-slot {
+        flex: 1 1 auto;
+        width: 100%;
+        min-height: 130px;
+        pointer-events: none;
+      }
+      #hero .hero-container .cta {
+        display: flex !important;
+        flex: none;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+        gap: 14px !important;
+        margin: 0 !important;
+        padding-top: 20px !important;
+        position: relative !important;
+        z-index: 5 !important;
+        pointer-events: auto !important;
+      }
+      #hero .hero-container .cta .btn {
+        min-width: 176px;
+        justify-content: center;
+      }
+      #hero h1 {
+        margin: 6px 0 0 !important;
+      }
+      @media (max-width: 480px) {
+        #hero .hero-container .cta .btn {
+          min-width: 0;
+          flex: 1 1 140px;
+        }
+        .forest-decor-birds-right {
+          top: clamp(65px, 12.5vh, 44px) !important;
+        }
+        .forest-decor-birds-right img {
+          animation-duration: 20s !important;
+        }
+      }
+
+      /* section 2: bigger heading + word reveal */
+      .about-section h2.about-main-serif {
+        font-size: clamp(2.8rem, 5.6vw, 5.2rem) !important;
+        line-height: 1.05 !important;
+        max-width: none !important;
+      }
+      .about-section .about-sub-serif {
+        font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+      }
+      #sc .wd,
+      #sc .wd span {
+        opacity: 1;
+      }
+      #sc .wd {
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: top;
+        padding: 0.04em 0.06em 0.14em;
+        margin: -0.04em -0.06em -0.14em;
+      }
+      #sc .wd > span {
+        display: inline-block;
+        will-change: transform;
+      }
+
+      /* contact / booking: orange accent line under heading that draws in */
+      #book .bk > div > h2 {
+        position: relative;
+        padding-bottom: 18px;
+      }
+      #book .bk > div > h2::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 84px;
+        height: 4px;
+        border-radius: 4px;
+        background: var(--o);
+        transform: scaleX(var(--ln, 1));
+        transform-origin: left;
+      }
+    </style>
+  </head>
+  <body>
+    <i id="sp"></i>
+    <svg width="0" height="0" style="position: absolute">
+      <symbol id="p" viewBox="0 0 24 24">
+        <ellipse cx="12" cy="16" rx="5.2" ry="4.4" />
+        <circle cx="4.8" cy="10.5" r="2.3" />
+        <circle cx="9.4" cy="5.6" r="2.3" />
+        <circle cx="14.6" cy="5.6" r="2.3" />
+        <circle cx="19.2" cy="10.5" r="2.3" />
+      </symbol>
+    </svg>
+
+    <div id="pre" aria-hidden="true">
+      <div class="bars pb1"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="bars pb2"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="in">
+        <div class="trail">
+          <svg class="paw"><use href="#p" /></svg>
+          <svg class="paw"><use href="#p" /></svg>
+          <svg class="paw"><use href="#p" /></svg>
+          <svg class="paw"><use href="#p" /></svg>
+        </div>
+        <b id="cnt">0%</b>
+        <small>FOLLOW THE WILD</small>
+      </div>
+    </div>
+    <header>
+      <div class="bar">
+        <a href="#hero" aria-label="BigCatTrail home"
+          ><img
+            src="data:image/webp;base64,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"
+            alt="BigCatTrail - Follow the Wild"
+            width="205"
+            height="40"
+        /></a>
+        <nav aria-label="Main">
+          <a href="#about">About</a><a href="#services">Safaris</a
+          ><a href="#parks">Parks</a><a href="#faq">FAQ</a>
+        </nav>
+        <a class="btn" href="#book">Book now</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero-section">
+        <div class="hero-forest-decor" id="heroForestDecor" aria-hidden="true">
+          <div class="forest-decor-left">
+            <svg
+              viewBox="0 0 540 850"
+              preserveAspectRatio="xMinYMin meet"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <g id="leftLeafSpray">
+                  <path
+                    d="M0,0 Q30,-16 65,-28"
+                    stroke="#367059"
+                    stroke-width="2.8"
+                    fill="none"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M16,-8 C7,-19 -2,-17 -6,-14 C-3,-5 5,-3 16,-8 Z"
+                    fill="#468f74"
+                  />
+                  <path
+                    d="M16,-8 C25,0 32,-2 36,-5 C34,-12 25,-14 16,-8 Z"
+                    fill="#58a88c"
+                  />
+                  <path
+                    d="M34,-16 C25,-27 16,-25 12,-22 C14,-13 23,-11 34,-16 Z"
+                    fill="#468f74"
+                  />
+                  <path
+                    d="M34,-16 C43,-8 50,-10 54,-13 C52,-20 43,-22 34,-16 Z"
+                    fill="#58a88c"
+                  />
+                  <path
+                    d="M52,-23 C43,-34 34,-32 30,-29 C32,-20 41,-18 52,-23 Z"
+                    fill="#468f74"
+                  />
+                  <path
+                    d="M52,-23 C61,-15 68,-17 72,-20 C70,-27 61,-29 52,-23 Z"
+                    fill="#69c1a3"
+                  />
+                  <path
+                    d="M65,-28 C68,-38 61,-42 56,-38 C58,-30 63,-28 65,-28 Z"
+                    fill="#7ed5b8"
+                  />
+                </g>
+              </defs>
+
+              <!-- Distant Left Canopy Soft Fill -->
+              <path
+                d="M0,0 L240,0 C200,35 160,65 110,80 C60,95 20,90 0,85 Z"
+                fill="#204c38"
+                opacity="0.5"
+              />
+              <path
+                d="M0,70 C50,65 110,90 160,135 C215,190 250,270 265,360 C180,340 90,300 0,220 Z"
+                fill="#1b4533"
+                opacity="0.6"
+              />
+
+              <!-- Left Forest Tree Trunk ascending along left edge -->
+              <path
+                d="M0,850 L140,850 
+           C125,750 120,640 135,530 
+           C150,430 180,345 230,270 
+           C268,210 320,165 400,130 
+           C470,100 530,90 580,75 
+           C550,65 500,70 440,82 
+           C320,105 220,120 140,155 
+           C75,185 30,220 0,265 Z"
+                fill="#36705a"
+              />
+
+              <!-- Bark Depth Contour -->
+              <path
+                d="M0,850 L115,850 
+           C105,730 110,610 122,510 
+           C135,440 158,375 190,315 
+           C225,255 272,210 340,175 
+           C410,140 485,125 540,110 
+           C515,102 475,105 415,120 
+           C315,145 220,165 150,198 
+           C90,225 45,268 15,325 
+           C0,360 0,420 0,510 Z"
+                fill="#43856b"
+              />
+
+              <!-- Main Left Branch extending inward toward center -->
+              <path
+                d="M190,320 
+           C250,350 330,380 415,395 
+           C490,410 550,400 600,375 
+           C570,368 520,370 465,360 
+           C390,345 320,320 265,295 
+           C230,278 200,255 180,235 Z"
+                fill="#3a7861"
+              />
+
+              <!-- Cascading Jungle Vines looping down the left -->
+              <path
+                d="M-10,-10 C85,120 95,250 30,380 C-30,480 -15,590 55,680"
+                fill="none"
+                stroke="#2e604d"
+                stroke-width="12"
+                stroke-linecap="round"
+              />
+              <path
+                d="M-10,-10 C85,120 95,250 30,380 C-30,480 -15,590 55,680"
+                fill="none"
+                stroke="#3d8067"
+                stroke-width="6"
+                stroke-linecap="round"
+              />
+              <path
+                d="M45,-10 C130,100 140,220 75,325 C20,410 10,490 35,575"
+                fill="none"
+                stroke="#35735c"
+                stroke-width="6"
+                stroke-linecap="round"
+              />
+
+              <!-- Leaf sprays on left branches and vines -->
+              <g transform="translate(110, 95) rotate(42) scale(1.15)">
+                <use href="#leftLeafSpray" />
+              </g>
+              <g transform="translate(150, 180) rotate(58) scale(1.1)">
+                <use href="#leftLeafSpray" />
+              </g>
+              <g transform="translate(195, 265) rotate(45) scale(1.2)">
+                <use href="#leftLeafSpray" />
+              </g>
+              <g transform="translate(300, 145) rotate(15) scale(1.35)">
+                <use href="#leftLeafSpray" />
+              </g>
+              <g transform="translate(390, 120) rotate(5) scale(1.4)">
+                <use href="#leftLeafSpray" />
+              </g>
+              <g transform="translate(480, 95) rotate(-5) scale(1.35)">
+                <use href="#leftLeafSpray" />
+              </g>
+              <g transform="translate(340, 360) rotate(-10) scale(1.25)">
+                <use href="#leftLeafSpray" />
+              </g>
+              <g transform="translate(430, 375) rotate(8) scale(1.3)">
+                <use href="#leftLeafSpray" />
+              </g>
+              <g transform="translate(510, 390) rotate(22) scale(1.25)">
+                <use href="#leftLeafSpray" />
+              </g>
+              <g transform="translate(250, 325) rotate(28) scale(1.2)">
+                <use href="#leftLeafSpray" />
+              </g>
+
+              <!-- Bottom-left tropical fronds -->
+              <g transform="translate(0, 620)">
+                <path
+                  d="M-20,180 C80,100 190,70 280,110 C240,140 160,170 80,180 Z"
+                  fill="#2d604c"
+                />
+                <path
+                  d="M-20,180 C50,60 140,20 230,40 C200,80 130,120 50,150 Z"
+                  fill="#3b7a62"
+                />
+                <path
+                  d="M-20,180 C30,20 90,-40 170,-30 C150,20 90,70 20,120 Z"
+                  fill="#4a9478"
+                />
+                <path
+                  d="M-20,180 C-10,-20 30,-90 90,-90 C90,-30 50,40 -10,120 Z"
+                  fill="#5db797"
+                />
+                <path
+                  d="M60,180 C110,110 170,80 240,100 C210,130 150,160 80,180 Z"
+                  fill="#438a6f"
+                />
+                <path
+                  d="M0,180 C40,100 110,60 170,80 C140,120 90,150 20,180 Z"
+                  fill="#347259"
+                />
+              </g>
+            </svg>
+          </div>
+          <div class="forest-decor-birds-right">
+            <svg viewBox="0 0 360 180" xmlns="http://www.w3.org/2000/svg">
+              <!-- Primary Soaring Bird (Right Sky) -->
+              <g class="hero-bird bird-primary" transform="translate(200, 75)">
+                <path
+                  d="M0,0 
+             C-7,-12 -20,-24 -38,-32 
+             C-56,-40 -76,-44 -96,-40 
+             C-82,-28 -66,-20 -52,-14 
+             C-36,-6 -20,3 -8,12 
+             C-12,20 -15,30 -20,42 
+             C-10,35 -2,26 5,18 
+             C12,26 20,35 30,42 
+             C25,30 22,20 18,12 
+             C30,3 46,-6 62,-14 
+             C76,-20 92,-28 106,-40 
+             C86,-44 66,-40 48,-32 
+             C30,-24 17,-12 10,0 
+             C8,-7 5,-12 0,-15 
+             C-5,-12 -8,-7 0,0 Z"
+                  fill="#ffffff"
+                />
+                <path
+                  d="M-52,-14 C-66,-20 -82,-28 -96,-40 C-78,-38 -62,-34 -46,-26 C-60,-22 -72,-15 -80,-6 C-70,-10 -60,-12 -52,-14 Z"
+                  fill="#e2f5ec"
+                  opacity="0.8"
+                />
+                <path
+                  d="M62,-14 C76,-20 92,-28 106,-40 C88,-38 72,-34 56,-26 C70,-22 82,-15 90,-6 C80,-10 70,-12 62,-14 Z"
+                  fill="#e2f5ec"
+                  opacity="0.8"
+                />
+              </g>
+
+              <!-- Secondary Soaring Bird (Higher Up on Right) -->
+              <g
+                class="hero-bird bird-secondary"
+                transform="translate(70, 45) scale(0.55) rotate(-12)"
+              >
+                <path
+                  d="M0,0 
+             C-7,-12 -20,-24 -38,-32 
+             C-56,-40 -76,-44 -96,-40 
+             C-82,-28 -66,-20 -52,-14 
+             C-36,-6 -20,3 -8,12 
+             C-12,20 -15,30 -20,42 
+             C-10,35 -2,26 5,18 
+             C12,26 20,35 30,42 
+             C25,30 22,20 18,12 
+             C30,3 46,-6 62,-14 
+             C76,-20 92,-28 106,-40 
+             C86,-44 66,-40 48,-32 
+             C30,-24 17,-12 10,0 
+             C8,-7 5,-12 0,-15 
+             C-5,-12 -8,-7 0,0 Z"
+                  fill="#ffffff"
+                  opacity="0.95"
+                />
+              </g>
+
+              <!-- Third Distant Soaring Bird (Gliding Far Right) -->
+              <g
+                class="hero-bird bird-tertiary"
+                transform="translate(305, 120) scale(0.42) rotate(16)"
+              >
+                <path
+                  d="M0,0 
+             C-7,-12 -20,-24 -38,-32 
+             C-56,-40 -76,-44 -96,-40 
+             C-82,-28 -66,-20 -52,-14 
+             C-36,-6 -20,3 -8,12 
+             C-12,20 -15,30 -20,42 
+             C-10,35 -2,26 5,18 
+             C12,26 20,35 30,42 
+             C25,30 22,20 18,12 
+             C30,3 46,-6 62,-14 
+             C76,-20 92,-28 106,-40 
+             C86,-44 66,-40 48,-32 
+             C30,-24 17,-12 10,0 
+             C8,-7 5,-12 0,-15 
+             C-5,-12 -8,-7 0,0 Z"
+                  fill="#ffffff"
+                  opacity="0.9"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="hero-container">
+          <div class="hero-txt">
+            <span class="kick">
+              <svg class="paw" viewBox="0 0 24 24">
+                <ellipse cx="12" cy="16" rx="5.2" ry="4.4" />
+                <circle cx="4.8" cy="10.5" r="2.3" />
+                <circle cx="9.4" cy="5.6" r="2.3" />
+                <circle cx="14.6" cy="5.6" r="2.3" />
+                <circle cx="19.2" cy="10.5" r="2.3" />
+              </svg>
+              Rajasthan Safari Booking
+            </span>
+            <h1 id="h1" aria-label="Wild, the way it should be.">
+              <span class="ln"><span>Wild, the way</span></span>
+              <span class="ln"><span>it should be.</span></span>
+            </h1>
+          </div>
+          <div class="hero-img-slot" id="heroImgSlot" aria-hidden="true"></div>
+          <div class="cta">
+            <a class="btn" href="#book">Book your safari</a>
+            <a class="btn ghost" href="#parks">Explore parks</a>
+          </div>
+        </div>
+
+        <!-- Expanding Tiger Image from preview card to 100% full screen on scroll -->
+        <div class="hero-image-stage" id="heroImageStage">
+          <div class="hero-image-card" id="heroImageCard">
+            <img
+              src="./tiger1.jpg"
+              alt="Royal Bengal Tiger in Rajasthan"
+              class="hero-tiger-photo"
+              id="heroTigerPhoto"
+            />
+            <div class="hero-image-overlay">
+              <div class="thumb-badge">
+                <span class="pulse-amber"></span>
+                <span>Royal Bengal Tiger • Ranthambore</span>
+              </div>
+              <div class="scroll-prompt">
+                <span>Scroll to expand</span>
+                <svg viewBox="0 0 24 24" class="scroll-arrow">
+                  <path
+                    d="M12 5v14M5 12l7 7 7-7"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ticker Scrolling Left to Right with Park Names -->
+        <div class="mq" aria-hidden="true">
+          <div>
+            <span>Ranthambore National Park</span><i>🐾</i>
+            <span>Sariska Tiger Reserve</span><i>🐾</i>
+            <span>Jawai Leopard Hills</span><i>🐾</i>
+            <span>Mukundra Hills Tiger Reserve</span><i>🐾</i>
+            <span>Keoladeo Ghana Bird Sanctuary</span><i>🐾</i>
+            <span>Desert National Park Jaisalmer</span><i>🐾</i>
+            <span>Ranthambore National Park</span><i>🐾</i>
+            <span>Sariska Tiger Reserve</span><i>🐾</i>
+            <span>Jawai Leopard Hills</span><i>🐾</i>
+            <span>Mukundra Hills Tiger Reserve</span><i>🐾</i>
+            <span>Keoladeo Ghana Bird Sanctuary</span><i>🐾</i>
+            <span>Desert National Park Jaisalmer</span><i>🐾</i>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="wrap about-wrap">
+          <div class="about-top-grid">
+            <div class="about-content-col">
+              <div class="about-title-block">
+                <span class="about-sub-serif">Unforgettable Experience at</span>
+                <h2 class="about-main-serif" id="sc">
+                  Ranthambore &amp; Rajasthan
+                </h2>
+              </div>
+
+              <p class="about-lead">
+                Visit Ranthambore Tiger Reserve to watch the Royal Bengal Tiger
+                in action &amp; explore its rich heritage &amp; wildlife.
+              </p>
+
+              <p class="about-body">
+                Ranthambore National Park is one of the biggest and most
+                renowned national parks in Northern India. The park is located
+                in the Sawai Madhopur district of southeastern Rajasthan, which
+                is about 130 km from Jaipur.
+              </p>
+
+              <p class="about-body sub-body">
+                Once considered as one of the famous and former hunting grounds
+                of the Maharajas of Jaipur, today the Ranthambore National Park
+                terrain is a major wildlife tourist attraction that has drawn
+                the attention of many wildlife photographers and lovers.
+              </p>
+
+              <div class="about-action">
+                <a class="explore-more-link" href="#parks"
+                  >Explore More &rsaquo;</a
+                >
+              </div>
+            </div>
+
+            <!-- RIGHT 50%: RAJASTHAN MAP TIGER ARTWORK (NO BORDER, BLENDED WITH BG) -->
+            <div class="about-visual-col">
+              <div class="map-artwork-container" id="aimg">
+                <img
+                  src="./rajasthan_map_tiger_transparent.png"
+                  alt="Royal Bengal Tiger Emerging from Rajasthan Map"
+                  class="map-artwork-img"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 POINTS IN A HORIZONTAL ROW (LEFT TO RIGHT) WITH 0-TO-TARGET EFFECT -->
+          <div class="about-stats-row">
+            <div class="about-stat-item">
+              <div class="stat-big-num">
+                <b class="counter-num" data-n="6">0</b
+                ><span class="stat-unit">+</span>
+              </div>
+              <div class="stat-text-meta">
+                <h4>National Parks &amp; Reserves Covered</h4>
+                <p>
+                  Ranthambore, Sariska, Jawai, Mukundra Hills, Desert &amp;
+                  Keoladeo
+                </p>
+              </div>
+            </div>
+
+            <div class="about-stat-item">
+              <div class="stat-big-num">
+                <b class="counter-num" data-n="2">0</b>
+              </div>
+              <div class="stat-text-meta">
+                <h4>Safari Slots Daily</h4>
+                <p>
+                  Morning golden-hour dawn drive and afternoon dusk safari slots
+                </p>
+              </div>
+            </div>
+
+            <div class="about-stat-item">
+              <div class="stat-big-num">
+                <b class="counter-num" data-n="10">0</b
+                ><span class="stat-unit">+</span>
+              </div>
+              <div class="stat-text-meta">
+                <h4>Prime Safari Zones</h4>
+                <p>
+                  Core and buffer wildlife zones with verified predator sighting
+                  tracks
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="wrap">
+          <div class="head">
+            <h2>Pick your way into the forest</h2>
+            <p>
+              From shared canters to private jeeps, every option comes with a
+              trained guide and a pickup from your hotel.
+            </p>
+          </div>
+          <div class="bento">
+            <article class="bc b1">
+              <div class="bc-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M5 17h14M5 17a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2M5 17l-1 2h16l-1-2M7 11h2M15 11h2M8 17v2M16 17v2"
+                  />
+                </svg>
+              </div>
+              <div class="bc-content">
+                <span class="chip">Up to 6 guests</span>
+                <h3>Jeep safari</h3>
+                <p>
+                  Open 4x4 Maruti gypsy for small groups. Fast on forest tracks,
+                  quiet in the wild, and prime seating for wildlife
+                  photographers.
+                </p>
+              </div>
+            </article>
+            <article class="bc b2">
+              <div class="bc-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="6" width="18" height="12" rx="2" />
+                  <circle cx="7" cy="18" r="2" />
+                  <circle cx="17" cy="18" r="2" />
+                  <path d="M3 12h18M9 6v6M15 6v6" />
+                </svg>
+              </div>
+              <div class="bc-content">
+                <span class="chip">Up to 20 guests</span>
+                <h3>Canter safari</h3>
+                <p>
+                  Open-top elevated safari canter with 360-degree tree canopy
+                  views. Ideal economical choice for families and larger groups.
+                </p>
+              </div>
+            </article>
+            <article class="bc b3">
+              <div class="bc-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+              </div>
+              <div class="bc-content">
+                <span class="chip">Exclusive &amp; Custom</span>
+                <h3>Private &amp; VIP Safaris</h3>
+                <p>
+                  Dedicated prime zone access with a master naturalist, flexible
+                  timings, and private custom routing.
+                </p>
+              </div>
+            </article>
+            <article class="bc b4">
+              <div class="bc-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+                  />
+                  <circle cx="12" cy="13" r="4" />
+                </svg>
+              </div>
+              <div class="bc-content">
+                <span class="chip">Golden-hour lighting</span>
+                <h3>Photography Tours</h3>
+                <p>
+                  Strategic positioning at waterholes, beanbag mounts, patience
+                  for predator action, and specialized lighting advice.
+                </p>
+              </div>
+            </article>
+            <article class="bc b5">
+              <div class="bc-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+              </div>
+              <div class="bc-content">
+                <span class="chip">Jaipur &amp; Delhi pickups</span>
+                <h3>Lodge Stays &amp; Transfers</h3>
+                <p>
+                  Hand-picked heritage jungle lodges and luxury tented camps
+                  near gate entrances with private chauffeur airport transfers.
+                </p>
+              </div>
+            </article>
+            <article class="bc b6">
+              <div class="bc-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <polygon
+                    points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"
+                  />
+                </svg>
+              </div>
+              <div class="bc-content">
+                <span class="chip">Multi-Park Circuit</span>
+                <h3>Full-Trip Planning</h3>
+                <p>
+                  Seamless Rajasthan circuits covering Ranthambore tigers, Jawai
+                  leopards, Keoladeo bird paradise, and desert dunes.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="parks">
+        <div class="pbg" id="pbg"></div>
+        <div class="wrap pk" id="pk">
+          <div>
+            <p class="cnt sw"><b id="pn">01</b> / 06</p>
+            <h2 id="pt" class="sw"></h2>
+            <p id="pd" class="sw"></p>
+            <ul id="pf" class="sw"></ul>
+            <a class="btn sw" id="pb" href="#book">Book this park</a>
+            <div class="ctl">
+              <button id="pv" aria-label="Previous park">&larr;</button
+              ><button id="nx" aria-label="Next park">&rarr;</button>
+              <div class="dots" id="dots"></div>
+            </div>
+          </div>
+          <div>
+            <div class="pimg" id="pimg" role="img" aria-label="Park scene">
+              <span class="tag" id="ptag"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="book">
+        <div class="wrap bk">
+          <div>
+            <h2>Tell us when you want to go</h2>
+            <p>
+              Share your dates and group size. We'll reply on WhatsApp with
+              availability, vehicle options and a clear quote.
+            </p>
+            <ul>
+              <li>
+                <svg class="paw"><use href="#p" /></svg>No payment needed to
+                enquire
+              </li>
+              <li>
+                <svg class="paw"><use href="#p" /></svg>Reply within a few hours
+              </li>
+              <li>
+                <svg class="paw"><use href="#p" /></svg>Hotel pickup and expert
+                guide
+              </li>
+            </ul>
+          </div>
+          <form id="f" novalidate>
+            <label
+              >Name<input
+                name="name"
+                required
+                autocomplete="name"
+                placeholder="Your full name"
+            /></label>
+            <label
+              >Email<input
+                name="email"
+                type="email"
+                required
+                autocomplete="email"
+                placeholder="you@email.com"
+            /></label>
+            <label
+              >Phone<input
+                name="phone"
+                type="tel"
+                required
+                autocomplete="tel"
+                placeholder="+91 98765 43210"
+            /></label>
+            <label
+              >Date of safari<input name="date" type="date" required
+            /></label>
+            <label>Members<select name="members"></select></label>
+            <label
+              >National park<select name="park">
+                <option>Ranthambore</option>
+                <option>Sariska</option>
+                <option>Keoladeo</option>
+                <option>Mukundra Hills</option>
+                <option>Desert National Park</option>
+                <option>Jawai</option>
+                <option>Not sure yet</option>
+              </select></label
+            >
+            <label class="full"
+              >Additional message<textarea
+                name="msg"
+                placeholder="Jeep or canter, stay needed, photography interest..."
+              ></textarea>
+            </label>
+            <button class="btn" type="submit">Send enquiry on WhatsApp</button>
+            <p id="ok" role="status"></p>
+          </form>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="faq">
+          <h2>Good questions</h2>
+          <div class="q">
+            <button aria-expanded="false">
+              Which season is best for a tiger safari?<i></i>
+            </button>
+            <div>
+              <p>
+                October to June. March to May is hot but animals gather near
+                water, which often improves sightings. Parks like Ranthambore
+                close in the monsoon.
+              </p>
+            </div>
+          </div>
+          <div class="q">
+            <button aria-expanded="false">
+              Jeep or canter: which should I choose?<i></i>
+            </button>
+            <div>
+              <p>
+                Jeeps hold up to 6 and suit small groups and photographers.
+                Canters hold about 20 and cost less per person. Both use the
+                same park routes.
+              </p>
+            </div>
+          </div>
+          <div class="q">
+            <button aria-expanded="false">
+              Can I be sure I'll see a tiger?<i></i>
+            </button>
+            <div>
+              <p>
+                No. These are wild animals. We pick zones and timings to improve
+                your odds, and booking two or more safaris helps a lot.
+              </p>
+            </div>
+          </div>
+          <div class="q">
+            <button aria-expanded="false">What should I carry?<i></i></button>
+            <div>
+              <p>
+                Earth-tone clothing, a light jacket for winter mornings,
+                sunscreen, a hat, a valid photo ID for every guest, and a camera
+                with a zoom lens.
+              </p>
+            </div>
+          </div>
+          <div class="q">
+            <button aria-expanded="false">
+              How do I confirm a booking?<i></i>
+            </button>
+            <div>
+              <p>
+                Send the enquiry form, and we will confirm availability and
+                share a quote on WhatsApp. Safari entry is subject to the forest
+                department's rules and permits.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <b>BigCat<em>Trail</em></b>
+      <nav>
+        <a href="#about">About</a><a href="#parks">Parks</a
+        ><a href="#book">Book</a>
+      </nav>
+      <span>&copy; 2026 BigCatTrail. Follow the Wild.</span>
+    </footer>
+
+    <a
+      class="wa"
+      href="https://wa.me/919999999999?text=Hi%20BigCatTrail%2C%20I%27d%20like%20to%20book%20a%20safari"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+      ><svg viewBox="0 0 24 24">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+        /></svg
+    ></a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script>
+      (function () {
+        var $ = (s, c) => (c || document).querySelector(s),
+          $$ = (s, c) => Array.from((c || document).querySelectorAll(s));
+        var reduce = matchMedia("(prefers-reduced-motion:reduce)").matches,
+          pre = $("#pre"),
+          hd = $("header");
+        var hs = () => hd.classList.toggle("sc", scrollY > 70);
+        addEventListener("scroll", hs, { passive: true });
+        hs();
+        var ms = $("select[name=members]");
+        for (var i = 1; i <= 20; i++)
+          ms.add(new Option(i + (i == 1 ? " person" : " people"), i));
+        $("input[name=date]").min = new Date().toISOString().split("T")[0];
+        $("#f").addEventListener("submit", (e) => {
+          e.preventDefault();
+          var f = e.target,
+            ok = $("#ok");
+          if (!f.checkValidity()) {
+            f.reportValidity();
+            ok.textContent = "Please fill in name, email, phone and date.";
+            return;
+          }
+          var v = Object.fromEntries(new FormData(f)),
+            t =
+              "Safari enquiry%0AName: " +
+              v.name +
+              "%0AEmail: " +
+              v.email +
+              "%0APhone: " +
+              v.phone +
+              "%0ADate: " +
+              v.date +
+              "%0AMembers: " +
+              v.members +
+              "%0APark: " +
+              v.park +
+              "%0AMessage: " +
+              (v.msg || "-");
+          ok.textContent = "Opening WhatsApp with your details...";
+          window.open("https://wa.me/919999999999?text=" + t, "_blank");
+        });
+        $$(".q").forEach((q) => {
+          var b = $("button", q),
+            p = $("div", q);
+          b.addEventListener("click", () => {
+            var o = q.classList.toggle("open");
+            b.setAttribute("aria-expanded", o);
+            window.gsap
+              ? gsap.to(p, {
+                  height: o ? "auto" : 0,
+                  duration: 0.45,
+                  ease: "power3.out",
+                })
+              : (p.style.height = o ? "auto" : 0);
+          });
+        });
+        $$(".bc").forEach((c) =>
+          c.addEventListener("pointermove", (e) => {
+            var r = c.getBoundingClientRect();
+            c.style.setProperty("--mx", e.clientX - r.left + "px");
+            c.style.setProperty("--my", e.clientY - r.top + "px");
+          }),
+        );
+        // park slider. Put real photo URLs in img:'' to replace the generated scenes.
+        var P = [
+          {
+            n: "Ranthambore",
+            tag: "Sawai Madhopur",
+            img: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1200&q=80",
+            c: ["#ffd84a", "#e8590c", "#5a1f04"],
+            loc: "Sawai Madhopur district",
+            t: "October to June",
+            sp: "Royal Bengal Tigers, leopards, sloth bears, marsh crocodiles",
+            d: "Rajasthan's premier tiger sanctuary, where ancient 10th-century fort ruins overlook picturesque lakes and dry deciduous forest trails.",
+          },
+          {
+            n: "Sariska",
+            tag: "Alwar",
+            img: "https://images.unsplash.com/photo-1549480017-d76466a4b7e8?auto=format&fit=crop&w=1200&q=80",
+            c: ["#8af0b4", "#0a8f4d", "#043a20"],
+            loc: "Alwar district, Aravalli hills",
+            t: "October to June",
+            sp: "Tigers, Indian leopards, striped hyenas, sambar deer",
+            d: "Spectacular valleys nestled in the ancient Aravalli range, historic ruins, and a thriving tiger population conveniently situated between Delhi and Jaipur.",
+          },
+          {
+            n: "Keoladeo",
+            tag: "Bharatpur",
+            img: "https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=1200&q=80",
+            c: ["#8fdcff", "#1480a8", "#06384d"],
+            loc: "Bharatpur, UNESCO World Heritage site",
+            t: "November to February",
+            sp: "Painted storks, sarus cranes, pythons, migratory waterfowl",
+            d: "Renowned UNESCO wetland haven hosting over 370 bird species each winter. Best navigated quietly by cycle rickshaw or guided bird walks.",
+          },
+          {
+            n: "Mukundra Hills",
+            tag: "Kota",
+            img: "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+            c: ["#ffb35c", "#c2410c", "#4a1605"],
+            loc: "Near Kota, Chambal river basin",
+            t: "October to June",
+            sp: "Leopards, sloth bears, Indian wolves, chinkara gazelles",
+            d: "Rugged river canyons and dense forest corridors along the Chambal river, offering an intimate, exclusive wilderness experience with few vehicles.",
+          },
+          {
+            n: "Desert National Park",
+            tag: "Jaisalmer",
+            img: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80",
+            c: ["#ffe27a", "#f59e0b", "#7a4a05"],
+            loc: "Jaisalmer, Great Thar Desert",
+            t: "October to March",
+            sp: "Great Indian Bustard, desert foxes, chinkara, steppe eagles",
+            d: "Golden rolling dunes, fossil beds, and vast Thar skies. Home to rare desert endemics and majestic birds of prey.",
+          },
+          {
+            n: "Jawai",
+            tag: "Pali",
+            img: "https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&w=1200&q=80",
+            c: ["#ffc2a1", "#d9622b", "#3d1a0a"],
+            loc: "Pali district, Jawai granite hills",
+            t: "October to March",
+            sp: "Cave-dwelling leopards, migratory flamingoes, mugger crocodiles",
+            d: "Stunning billion-year-old granite formations where wild leopards coexist peacefully with Rabari shepherds. India's top destination for leopard sightings.",
+          },
+        ];
+        var cur = 0,
+          tm,
+          pbg = $("#pbg"),
+          pimg = $("#pimg"),
+          dots = $("#dots");
+        function scene(c) {
+          var s =
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' +
+            c[0] +
+            '"/><stop offset="1" stop-color="' +
+            c[1] +
+            '"/></linearGradient></defs><rect width="800" height="1000" fill="url(#a)"/><circle cx="560" cy="330" r="120" fill="#fff" opacity=".4"/><path d="M0 640Q200 520 400 620T800 580V1000H0Z" fill="' +
+            c[2] +
+            '" opacity=".5"/><path d="M0 760Q250 650 480 740T800 700V1000H0Z" fill="' +
+            c[2] +
+            '" opacity=".8"/><g fill="#000" opacity=".6"><rect x="150" y="690" width="10" height="130"/><ellipse cx="155" cy="685" rx="90" ry="24"/><rect x="620" y="720" width="8" height="110"/><ellipse cx="624" cy="716" rx="70" ry="20"/></g><path d="M0 880Q300 800 560 870T800 840V1000H0Z" fill="#000" opacity=".55"/></svg>';
+          return 'url("data:image/svg+xml,' + encodeURIComponent(s) + '")';
+        }
+        P.forEach((p, i) => {
+          var b = document.createElement("button");
+          b.setAttribute("aria-label", "Show " + p.n);
+          b.onclick = () => {
+            show(i);
+            auto();
+          };
+          dots.appendChild(b);
+        });
+        function fill(i) {
+          var p = P[i],
+            bg = p.img ? 'url("' + p.img + '")' : scene(p.c);
+          $("#pn").textContent = "0" + (i + 1);
+          $("#pt").textContent = p.n;
+          $("#pd").textContent = p.d;
+          $("#pf").innerHTML =
+            "<li><b>Where</b><span>" +
+            p.loc +
+            "</span></li><li><b>Best time</b><span>" +
+            p.t +
+            "</span></li><li><b>Look for</b><span>" +
+            p.sp +
+            "</span></li>";
+          $("#ptag").textContent = p.tag;
+          pbg.style.backgroundImage = bg;
+          pimg.style.backgroundImage = bg;
+          $$("button", dots).forEach((b, k) =>
+            b.classList.toggle("on", k == i),
+          );
+        }
+        function show(i, first) {
+          cur = (i + P.length) % P.length;
+          if (first || !window.gsap || reduce) {
+            fill(cur);
+            return;
+          }
+          gsap
+            .timeline()
+            .to(".sw", { opacity: 0, y: -22, duration: 0.28, stagger: 0.03 })
+            .to([pbg, pimg], { opacity: 0, duration: 0.28 }, 0)
+            .add(() => fill(cur))
+            .fromTo(
+              ".sw",
+              { y: 26 },
+              {
+                opacity: 1,
+                y: 0,
+                duration: 0.6,
+                stagger: 0.07,
+                ease: "power3.out",
+              },
+            )
+            .to(pbg, { opacity: 0.42, duration: 0.7 }, "<")
+            .fromTo(
+              pimg,
+              { opacity: 0, scale: 1.06, rotate: -2 },
+              {
+                opacity: 1,
+                scale: 1,
+                rotate: 0,
+                duration: 0.8,
+                ease: "power3.out",
+              },
+              "<",
+            );
+        }
+        function auto() {
+          clearInterval(tm);
+          if (!reduce) tm = setInterval(() => show(cur + 1), 7500);
+        }
+        $("#nx").onclick = () => {
+          show(cur + 1);
+          auto();
+        };
+        $("#pv").onclick = () => {
+          show(cur - 1);
+          auto();
+        };
+        $("#pb").addEventListener("click", () => {
+          $("select[name=park]").value = P[cur].n;
+        });
+        var sx = 0,
+          pk = $("#pk");
+        pk.addEventListener("pointerdown", (e) => {
+          sx = e.clientX;
+        });
+        pk.addEventListener("pointerup", (e) => {
+          var d = e.clientX - sx;
+          if (Math.abs(d) > 60 && e.pointerType !== "mouse") {
+            show(cur + (d < 0 ? 1 : -1));
+            auto();
+          }
+        });
+        $("#parks").addEventListener("mouseenter", () => clearInterval(tm));
+        $("#parks").addEventListener("mouseleave", auto);
+        show(0, true);
+        auto();
+        var scn = (i) => scene(P[i % 6].c);
+        $$(".ph").forEach((e) => (e.style.backgroundImage = scn(+e.dataset.s)));
+        /* clean bgi prepending removed for high contrast */
+        /* plan form removed */
+        var IMG = {
+          hero: "",
+          about: "./bengal_tiger.jpg",
+          s1: "https://i.pinimg.com/736x/ff/7c/c3/ff7cc3f48def0917b43aa009231452b9.jpg",
+          s2: "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=900&q=80",
+          s3: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=900&q=80",
+          s4: "https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=900&q=80",
+          s5: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80",
+          s6: "https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&w=900&q=80",
+        };
+        var U = (k, c) => (IMG[k] ? 'url("' + IMG[k] + '")' : scene(c));
+        function heroArt() {
+          var r = 7,
+            rnd = () => (r = (r * 9301 + 49297) % 233280) / 233280,
+            c = ["#7a5a3c", "#8f6b47", "#a47c53", "#5f4630", "#b38c60"],
+            o =
+              '<path d="M0 330L140 300 300 335 470 300 640 340 820 305 1000 340 1180 300 1360 335 1600 310V560H0Z" fill="#6b4e34"/>';
+          var R = (n, y0, dy, k) => {
+            for (var i = 0; i < n; i++) {
+              var x = rnd() * 1650 - 25,
+                y = y0 + i * dy + rnd() * 12,
+                w = 50 + rnd() * 120,
+                h = k * (22 + rnd() * 40);
+              o +=
+                '<path d="M' +
+                x +
+                " " +
+                y +
+                "l" +
+                w * 0.2 +
+                " " +
+                -h +
+                " " +
+                w * 0.5 +
+                " " +
+                -h * 0.3 +
+                " " +
+                w * 0.3 +
+                " " +
+                h * 0.4 +
+                " " +
+                w * 0.2 +
+                " " +
+                h * 0.9 +
+                'z" fill="' +
+                c[i % 5] +
+                '"/>';
+            }
+          };
+          R(26, 345, 3.4, 1);
+          o +=
+            '<g transform="translate(200 230)"><path d="M62 78C0 70-24 10 16-12" stroke="#ee8d1e" stroke-width="15" fill="none" stroke-linecap="round"/><path d="M118 110l-22 84-12 30h30l10-30 26-70zM160 112l10 80-6 32h28l4-34 6-76z" fill="#cf6f0d"/><ellipse cx="220" cy="92" rx="172" ry="54" fill="#ee8d1e"/><ellipse cx="230" cy="128" rx="120" ry="18" fill="#f7cf93"/><path d="M300 120l36 90-8 18h30l4-20 6-84zM338 116l34 80-4 30h30l2-34-10-70z" fill="#ee8d1e"/><ellipse cx="404" cy="86" rx="54" ry="44" fill="#ee8d1e"/><circle cx="378" cy="52" r="14" fill="#ee8d1e"/><circle cx="426" cy="50" r="14" fill="#ee8d1e"/><ellipse cx="436" cy="104" rx="26" ry="18" fill="#fbe6c4"/><ellipse cx="456" cy="94" rx="7" ry="5" fill="#2a1408"/><circle cx="418" cy="78" r="5" fill="#2a1408"/><g stroke="#1b0e04" stroke-width="9" stroke-linecap="round" fill="none"><path d="M100 44q12 26 0 54M140 38q12 30 0 62M182 36q12 30 0 64M226 36q12 30 0 64M270 40q12 28 0 60M312 50q10 22 0 44M380 40q8 14 0 28M404 36q8 12 0 26"/></g></g>';
+          o +=
+            '<g transform="translate(1030 205)"><circle cx="95" cy="232" r="40" fill="#161616"/><circle cx="95" cy="232" r="16" fill="#555"/><circle cx="320" cy="232" r="40" fill="#161616"/><circle cx="320" cy="232" r="16" fill="#555"/><path d="M10 168h400v46H10z" fill="#4d5a3a"/><path d="M268 168l22-42h118v42z" fill="#56643f"/><path d="M262 168l28-62 12 4-20 58z" fill="#9db2b8"/><path d="M40 168V58h200v110M130 58v110" stroke="#1e1e1e" stroke-width="6" fill="none"/><g fill="#a99a6b"><rect x="62" y="88" width="38" height="82" rx="12"/><rect x="118" y="96" width="36" height="74" rx="12"/><rect x="172" y="92" width="38" height="78" rx="12"/></g><g fill="#c58b62"><circle cx="81" cy="70" r="15"/><circle cx="136" cy="78" r="14"/><circle cx="191" cy="74" r="15"/></g><rect x="0" y="82" width="52" height="16" rx="4" fill="#111"/><rect x="330" y="176" width="70" height="14" rx="3" fill="#e2700c"/></g>';
+          R(34, 455, 2.6, 0.8);
+          return (
+            'url("data:image/svg+xml,' +
+            encodeURIComponent(
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 560" preserveAspectRatio="xMidYMax slice">' +
+                o +
+                "</svg>",
+            ) +
+            '")'
+          );
+        }
+        var _scene = $(".scene") || $(".stage");
+        if (_scene)
+          _scene.style.backgroundImage = IMG.hero
+            ? 'url("' + IMG.hero + '")'
+            : heroArt();
+        var _aimg = $("#aimg");
+        if (_aimg) _aimg.style.backgroundImage = U("about", P[0].c);
+        $$(".bc").forEach(
+          (c, i) =>
+            (c.style.backgroundImage =
+              "linear-gradient(to top,rgba(5,25,14,.9),rgba(5,25,14,.2))," +
+              U("s" + (i + 1), P[i].c)),
+        );
+        /* plan form removed */
+        /* plan event listener removed */
+        function init() {
+          if (!window.gsap || !window.ScrollTrigger) {
+            pre && pre.remove();
+            return;
+          }
+
+          var reduce = window.matchMedia(
+            "(prefers-reduced-motion: reduce)",
+          ).matches;
+
+          gsap.registerPlugin(ScrollTrigger);
+
+          // Smooth scrolling, wired into ScrollTrigger so pin + scrub stay in sync
+          if (window.Lenis && !reduce) {
+            var lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+            lenis.on("scroll", ScrollTrigger.update);
+            gsap.ticker.add(function (t) {
+              lenis.raf(t * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
+            $$('a[href^="#"]').forEach(function (a) {
+              a.addEventListener("click", function (e) {
+                var id = a.getAttribute("href");
+                if (!id || id.length < 2) return;
+                var t = $(id);
+                if (!t) return;
+                e.preventDefault();
+                if (id === "#hero") lenis.scrollTo(0);
+                else lenis.scrollTo(t, { offset: -70 });
+              });
+            });
+          }
+
+          // ==========================================
+          // SECTION 2: ABOUT US (IN & OUT ON SCROLL)
+          // ==========================================
+          var aboutH2 = $("#sc");
+          if (aboutH2 && !aboutH2.dataset.split) {
+            var aTxt = aboutH2.textContent.trim();
+            aboutH2.setAttribute("aria-label", aTxt);
+            aboutH2.innerHTML = aTxt
+              .split(/\s+/)
+              .map(function (w) {
+                return (
+                  '<span class="wd" aria-hidden="true"><span>' +
+                  w +
+                  "</span></span>"
+                );
+              })
+              .join(" ");
+            aboutH2.dataset.split = "1";
+          }
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: "#about",
+                start: "top 72%",
+                toggleActions: "play none none reverse",
+              },
+            })
+            .from(".about-sub-serif", {
+              y: 24,
+              opacity: 0,
+              duration: 0.7,
+              ease: "power2.out",
+            })
+            .from(
+              "#sc .wd > span",
+              {
+                yPercent: 115,
+                rotate: 5,
+                duration: 1,
+                stagger: 0.14,
+                ease: "power4.out",
+              },
+              "-=0.35",
+            )
+            .from(
+              ".about-lead, .about-body, .about-action",
+              {
+                y: 34,
+                opacity: 0,
+                stagger: 0.16,
+                duration: 0.85,
+                ease: "power2.out",
+              },
+              "-=0.55",
+            )
+            .from(
+              ".map-artwork-container",
+              { x: 70, opacity: 0, duration: 1.1, ease: "power3.out" },
+              0.2,
+            )
+            .from(
+              ".about-stat-item",
+              {
+                y: 40,
+                opacity: 0,
+                stagger: 0.14,
+                duration: 0.8,
+                ease: "power2.out",
+              },
+              "-=0.5",
+            );
+
+          // Wide Tiger Map Artwork: Continuous scroll momentum parallax in & out
+          if ($(".map-artwork-img")) {
+            gsap.fromTo(
+              ".map-artwork-img",
+              { y: 50, scale: 0.94, opacity: 0.8 },
+              {
+                y: -35,
+                scale: 1.04,
+                opacity: 1,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: "#about",
+                  start: "top bottom",
+                  end: "bottom top",
+                  scrub: 0.8,
+                },
+              },
+            );
+          }
+
+          // Counter Numbers: Trigger on enter and reset on leaveBack for bidirectional dynamic feel
+          $$(".counter-num").forEach((el) => {
+            var n = +el.dataset.n;
+            var o = { v: 0 };
+            ScrollTrigger.create({
+              trigger: el,
+              start: "top 88%",
+              toggleActions: "play none none reverse",
+              onEnter: () =>
+                gsap.to(o, {
+                  v: n,
+                  duration: 1.5,
+                  ease: "power2.out",
+                  onUpdate: () => (el.textContent = Math.round(o.v)),
+                }),
+              onLeaveBack: () => {
+                o.v = 0;
+                el.textContent = "0";
+              },
+            });
+          });
+
+          // ==========================================
+          // SECTION 3: SERVICES / BENTO (IN & OUT ON SCROLL)
+          // ==========================================
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: "#services",
+                start: "top 85%",
+                end: "bottom 15%",
+                toggleActions: "play none none reverse",
+              },
+            })
+            .from("#services .head > *", {
+              y: 40,
+              opacity: 0,
+              stagger: 0.1,
+              duration: 0.75,
+              ease: "power2.out",
+            })
+            .from(
+              ".bc",
+              {
+                y: 45,
+                opacity: 0,
+                scale: 0.96,
+                stagger: 0.08,
+                duration: 0.75,
+                ease: "power2.out",
+              },
+              "-=0.2",
+            );
+
+          // ==========================================
+          // SECTION 4: PARKS (IN & OUT ON SCROLL)
+          // ==========================================
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: "#parks",
+                start: "top 82%",
+                end: "bottom 18%",
+                toggleActions: "play none none reverse",
+              },
+            })
+            .from("#parks .head > *", {
+              y: 35,
+              opacity: 0,
+              stagger: 0.09,
+              duration: 0.75,
+              ease: "power2.out",
+            })
+            .from(
+              "#pk",
+              {
+                y: 45,
+                opacity: 0,
+                duration: 0.85,
+                ease: "power2.out",
+              },
+              "-=0.3",
+            );
+
+          gsap.to("#pimg", {
+            y: -50,
+            scale: 1.08,
+            ease: "none",
+            scrollTrigger: {
+              trigger: "#parks",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 0.8,
+            },
+          });
+
+          // ==========================================
+          // SECTION 5: BOOKING (IN & OUT ON SCROLL)
+          // ==========================================
+          gsap.set("#book .bk > div > h2", { "--ln": 0 });
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: "#book",
+                start: "top 72%",
+                toggleActions: "play none none reverse",
+              },
+            })
+            .from("#book .bk > div > h2", {
+              y: 44,
+              opacity: 0,
+              duration: 0.85,
+              ease: "power3.out",
+            })
+            .to(
+              "#book .bk > div > h2",
+              { "--ln": 1, duration: 0.8, ease: "power2.out" },
+              "-=0.4",
+            )
+            .from(
+              "#book .bk > div > p",
+              { y: 30, opacity: 0, duration: 0.7, ease: "power2.out" },
+              "-=0.6",
+            )
+            .from(
+              "#book .bk li",
+              {
+                x: -34,
+                opacity: 0,
+                stagger: 0.14,
+                duration: 0.65,
+                ease: "power2.out",
+              },
+              "-=0.4",
+            )
+            .from(
+              "#book .bk li svg",
+              {
+                scale: 0,
+                rotate: -50,
+                stagger: 0.14,
+                duration: 0.55,
+                ease: "back.out(2.2)",
+              },
+              "<0.1",
+            )
+            .from(
+              "#book form",
+              {
+                y: 60,
+                opacity: 0,
+                scale: 0.97,
+                duration: 0.9,
+                ease: "power3.out",
+              },
+              0.25,
+            )
+            .from(
+              "#book form label",
+              {
+                y: 26,
+                opacity: 0,
+                stagger: 0.09,
+                duration: 0.6,
+                ease: "power2.out",
+              },
+              "-=0.55",
+            )
+            .from(
+              "#book form .btn",
+              {
+                y: 22,
+                opacity: 0,
+                scale: 0.9,
+                duration: 0.7,
+                ease: "back.out(1.8)",
+              },
+              "-=0.25",
+            );
+
+          // ==========================================
+          // SECTION 6: FAQ (IN & OUT ON SCROLL)
+          // ==========================================
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: "#faq",
+                start: "top 82%",
+                end: "bottom 18%",
+                toggleActions: "play none none reverse",
+              },
+            })
+            .from("#faq h2", {
+              y: 35,
+              opacity: 0,
+              duration: 0.7,
+              ease: "power2.out",
+            })
+            .from(
+              ".q",
+              {
+                y: 30,
+                opacity: 0,
+                stagger: 0.07,
+                duration: 0.6,
+                ease: "power2.out",
+              },
+              "-=0.3",
+            );
+
+          // ==========================================
+          // SECTION 1: HERO & PRELOADER
+          // ==========================================
+          gsap.set(".kick, .hero-p, .cta, header .bar", { opacity: 0, y: 18 });
+          gsap.set("#hero h1 .ln span", { yPercent: 110 });
+          gsap.set("#heroImageCard", { opacity: 0 });
+
+          var cnt = $("#cnt"),
+            o = { v: 0 },
+            tl = gsap.timeline();
+
+          tl.to(
+            ".trail svg",
+            { opacity: 1, stagger: 0.28, duration: 0.35, ease: "power2.out" },
+            0,
+          )
+            .to(
+              o,
+              {
+                v: 100,
+                duration: 1.5,
+                ease: "power2.inOut",
+                onUpdate: () => {
+                  if (cnt) cnt.textContent = Math.round(o.v) + "%";
+                },
+              },
+              0,
+            )
+            .to(
+              ".in",
+              { opacity: 0, y: -20, duration: 0.4, ease: "power3.in" },
+              ">+0.1",
+            )
+            .to(
+              ".pb1 i",
+              { scaleY: 0, duration: 0.8, stagger: 0.07, ease: "power4.inOut" },
+              ">-0.05",
+            )
+            .to(
+              ".pb2 i",
+              { scaleY: 0, duration: 0.8, stagger: 0.07, ease: "power4.inOut" },
+              "<0.12",
+            )
+            .to(
+              "#hero h1 .ln span",
+              {
+                yPercent: 0,
+                duration: 0.95,
+                stagger: 0.14,
+                ease: "power4.out",
+              },
+              "-=0.5",
+            )
+            .to(
+              ".kick, .hero-p, .cta, header .bar",
+              {
+                opacity: 1,
+                y: 0,
+                stagger: 0.08,
+                duration: 0.8,
+                ease: "power3.out",
+              },
+              "-=0.6",
+            )
+            .to(
+              "#heroImageCard",
+              {
+                opacity: 1,
+                duration: 0.8,
+                ease: "power3.out",
+              },
+              "-=0.5",
+            )
+            .add(() => {
+              if ("scrollRestoration" in history) {
+                history.scrollRestoration = "manual";
+              }
+              window.scrollTo(0, 0);
+              if (pre) pre.remove();
+              ScrollTrigger.refresh();
+            });
+
+          if (reduce) tl.progress(1);
+
+          // HERO PINNED EXPANDING TIGER ZOOM EFFECT
+          // The preview rectangle is measured from the real text + ticker positions,
+          // so the image can never sit on top of the heading / buttons.
+          if (!reduce) {
+            var heroEl = $("#hero"),
+              heroCard = $("#heroImageCard"),
+              heroPhoto = $("#heroTigerPhoto"),
+              heroOv = $(".hero-image-overlay");
+
+            var previewRect = function () {
+              var hr = heroEl.getBoundingClientRect(),
+                sr = $("#heroImgSlot").getBoundingClientRect(),
+                H = hr.height,
+                W = hr.width;
+              var h = Math.max(120, sr.height);
+              var w = Math.min(
+                W - 32,
+                Math.max(W * 0.45, Math.min(W * 0.7, h * 2.1)),
+              );
+              var l = (W - w) / 2;
+              var top = sr.top - hr.top;
+              return { t: top, l: l, w: w, h: h, W: W, H: H };
+            };
+
+            var startClip = function () {
+              var r = previewRect();
+              heroOv.style.setProperty("--rl", r.l + "px");
+              heroOv.style.setProperty("--rt", r.t + "px");
+              heroOv.style.setProperty("--rw", r.w + "px");
+              heroOv.style.setProperty("--rh", r.h + "px");
+              return (
+                "inset(" +
+                r.t +
+                "px " +
+                r.l +
+                "px " +
+                (r.H - r.t - r.h) +
+                "px " +
+                r.l +
+                "px round 20px)"
+              );
+            };
+
+            var heroTl = gsap.timeline({
+              scrollTrigger: {
+                trigger: "#hero",
+                start: "top top",
+                end: "+=120%",
+                scrub: 0.5,
+                pin: true,
+                pinSpacing: true,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+                refreshPriority: 1, // pin must be measured first so later sections get correct offsets
+              },
+            });
+
+            heroTl
+              .to(
+                [".hero-txt", "#heroForestDecor", "#hero .cta"],
+                {
+                  opacity: 0,
+                  y: -30,
+                  duration: 0.3,
+                  ease: "power1.out",
+                },
+                0,
+              )
+              .to(
+                ".mq",
+                { opacity: 0, y: 35, duration: 0.26, ease: "power1.out" },
+                0,
+              )
+              .to(heroOv, { opacity: 0, duration: 0.18, ease: "power1.out" }, 0)
+              .fromTo(
+                heroCard,
+                { clipPath: startClip },
+                {
+                  clipPath: "inset(0px 0px 0px 0px round 0px)",
+                  duration: 0.6,
+                  ease: "power2.inOut",
+                },
+                0,
+              )
+              .fromTo(
+                heroPhoto,
+                { scale: 1.35 },
+                { scale: 1, duration: 0.6, ease: "power2.inOut" },
+                0,
+              )
+              .to(heroPhoto, { scale: 1.07, duration: 0.4, ease: "none" }, 0.6);
+          }
+
+          window.addEventListener("load", () => {
+            ScrollTrigger.refresh();
+          });
+        }
+        var safe = () => {
+          try {
+            init();
+          } catch (e) {
+            console.error(e);
+            pre && pre.remove();
+          }
+        };
+        document.readyState === "complete"
+          ? safe()
+          : addEventListener("load", safe);
+        setTimeout(() => {
+          var p = $("#pre");
+          if (p) {
+            p.style.transition = "opacity .5s";
+            p.style.opacity = 0;
+            setTimeout(() => p.remove(), 500);
+          }
+        }, 9000);
+      })();
+    </script>
+  </body>
+</html>
